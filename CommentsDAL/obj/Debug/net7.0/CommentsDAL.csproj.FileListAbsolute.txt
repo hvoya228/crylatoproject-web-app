@@ -1,0 +1,14 @@
+D:\Table\Projects\websites\CrylatoProject\CommentsDAL\bin\Debug\net7.0\CommentsDAL.deps.json
+D:\Table\Projects\websites\CrylatoProject\CommentsDAL\bin\Debug\net7.0\CommentsDAL.runtimeconfig.json
+D:\Table\Projects\websites\CrylatoProject\CommentsDAL\bin\Debug\net7.0\CommentsDAL.dll
+D:\Table\Projects\websites\CrylatoProject\CommentsDAL\bin\Debug\net7.0\CommentsDAL.pdb
+D:\Table\Projects\websites\CrylatoProject\CommentsDAL\obj\Debug\net7.0\CommentsDAL.csproj.AssemblyReference.cache
+D:\Table\Projects\websites\CrylatoProject\CommentsDAL\obj\Debug\net7.0\CommentsDAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\Table\Projects\websites\CrylatoProject\CommentsDAL\obj\Debug\net7.0\CommentsDAL.AssemblyInfoInputs.cache
+D:\Table\Projects\websites\CrylatoProject\CommentsDAL\obj\Debug\net7.0\CommentsDAL.AssemblyInfo.cs
+D:\Table\Projects\websites\CrylatoProject\CommentsDAL\obj\Debug\net7.0\CommentsDAL.csproj.CoreCompileInputs.cache
+D:\Table\Projects\websites\CrylatoProject\CommentsDAL\obj\Debug\net7.0\CommentsDAL.dll
+D:\Table\Projects\websites\CrylatoProject\CommentsDAL\obj\Debug\net7.0\refint\CommentsDAL.dll
+D:\Table\Projects\websites\CrylatoProject\CommentsDAL\obj\Debug\net7.0\CommentsDAL.pdb
+D:\Table\Projects\websites\CrylatoProject\CommentsDAL\obj\Debug\net7.0\CommentsDAL.genruntimeconfig.cache
+D:\Table\Projects\websites\CrylatoProject\CommentsDAL\obj\Debug\net7.0\ref\CommentsDAL.dll
