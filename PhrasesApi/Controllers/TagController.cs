@@ -17,27 +17,27 @@ namespace PhrasesApi.Controllers
             _ADOuow = ado_unitofwork;
         }
 
-        //GET: api/events
-        [HttpGet]
-        public async Task<ActionResult<IEnumerable<Tag>>> GetAllEventsAsync()
+        //Get all
+        [HttpGet("GetAll")]
+        public async Task<ActionResult<IEnumerable<Tag>>> GetAll()
         {
             try
             {
                 var results = await _ADOuow._tagRepository.GetAllAsync();
                 _ADOuow.Commit();
-                _logger.LogInformation($"Отримали всі івенти з бази даних!");
+                _logger.LogInformation($"Success (GetAllEventsAsync)");
                 return Ok(results);
             }
             catch (Exception ex)
             {
-                _logger.LogError($"Транзакція сфейлилась! Щось пішло не так у методі GetAllEventsAsync() - {ex.Message}");
-                return StatusCode(StatusCodes.Status500InternalServerError, "вот так вот!");
+                _logger.LogError($"Error (GetAllEventsAsync) - {ex.Message}");
+                return StatusCode(StatusCodes.Status500InternalServerError, "error");
             }
         }
 
-        //GET: api/events/Id
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Tag>> GetByIdAsync(int id)
+        //Get by id
+        [HttpGet("GetById/{id}")]
+        public async Task<ActionResult<Tag>> GetById(int id)
         {
             try
             {
@@ -45,38 +45,38 @@ namespace PhrasesApi.Controllers
                 _ADOuow.Commit();
                 if (result == null)
                 {
-                    _logger.LogInformation($"Івент із Id: {id}, не був знайдейний у базі даних");
+                    _logger.LogInformation($"Error (GetByIdAsync): id {id} not found");
                     return NotFound();
                 }
                 else
                 {
-                    _logger.LogInformation($"Отримали івент з бази даних!");
+                    _logger.LogInformation($"Success (GetByIdAsync)");
                     return Ok(result);
                 }
 
             }
             catch (Exception ex)
             {
-                _logger.LogError($"Транзакція сфейлилась! Щось пішло не так у методі GetAllEventsAsync() - {ex.Message}");
-                return StatusCode(StatusCodes.Status500InternalServerError, "вот так вот!");
+                _logger.LogError($"Error (GetByIdAsync) - {ex.Message}");
+                return StatusCode(StatusCodes.Status500InternalServerError, "error");
             }
         }
 
-        //POST: api/events
-        [HttpPost]
-        public async Task<ActionResult> PostEventAsync([FromBody] Tag evnt)
+        //Post
+        [HttpPost("Post")]
+        public async Task<ActionResult> Post([FromBody] Tag evnt)
         {
             try
             {
                 if (evnt == null)
                 {
-                    _logger.LogInformation($"Ми отримали пустий json зі сторони клієнта");
-                    return BadRequest("Обєкт івенту є null");
+                    _logger.LogInformation($"Empty json from client (PostEventAsync)");
+                    return BadRequest("Object is null");
                 }
                 if (!ModelState.IsValid)
                 {
-                    _logger.LogInformation($"Ми отримали некоректний json зі сторони клієнта");
-                    return BadRequest("Обєкт івенту є некоректним");
+                    _logger.LogInformation($"Incorrect json from client (PostEventAsync)");
+                    return BadRequest("Object is incorrect");
                 }
                 var created_id = await _ADOuow._tagRepository.AddAsync(evnt);
                 _ADOuow.Commit();
@@ -84,32 +84,32 @@ namespace PhrasesApi.Controllers
             }
             catch (Exception ex)
             {
-                _logger.LogError($"Транзакція сфейлилась! Щось пішло не так у методі PostEventAsync - {ex.Message}");
-                return StatusCode(StatusCodes.Status500InternalServerError, "вот так вот!");
+                _logger.LogError($"Error (PostEventAsync) - {ex.Message}");
+                return StatusCode(StatusCodes.Status500InternalServerError, "error");
             }
         }
 
-        //POST: api/events/id
-        [HttpPut("{id}")]
-        public async Task<ActionResult> UpdateEventAsync(int id, [FromBody] Tag evnt)
+        //Update by id
+        [HttpPut("UpdateById/{id}")]
+        public async Task<ActionResult> UpdateById(int id, [FromBody] Tag evnt)
         {
             try
             {
                 if (evnt == null)
                 {
-                    _logger.LogInformation($"Ми отримали пустий json зі сторони клієнта");
-                    return BadRequest("Обєкт івенту є null");
+                    _logger.LogInformation($"Empty json from client (UpdateEventAsync)");
+                    return BadRequest("Object is null");
                 }
                 if (!ModelState.IsValid)
                 {
-                    _logger.LogInformation($"Ми отримали некоректний json зі сторони клієнта");
-                    return BadRequest("Обєкт івенту є некоректним");
+                    _logger.LogInformation($"Incorrect json from client (UpdateEventAsync)");
+                    return BadRequest("Object is incorrect");
                 }
 
                 var event_entity = await _ADOuow._tagRepository.GetAsync(id);
                 if (event_entity == null)
                 {
-                    _logger.LogInformation($"Івент із Id: {id}, не був знайдейний у базі даних");
+                    _logger.LogInformation($"There is no object with id {id} in database (UpdateEventAsync)");
                     return NotFound();
                 }
 
@@ -119,21 +119,21 @@ namespace PhrasesApi.Controllers
             }
             catch (Exception ex)
             {
-                _logger.LogError($"Транзакція сфейлилась! Щось пішло не так у методі PostEventAsync - {ex.Message}");
-                return StatusCode(StatusCodes.Status500InternalServerError, "вот так вот!");
+                _logger.LogError($"Error (PostEventAsync) - {ex.Message}");
+                return StatusCode(StatusCodes.Status500InternalServerError, "error");
             }
         }
 
-        //GET: api/events/Id
-        [HttpDelete("{id}")]
-        public async Task<ActionResult> DeleteByIdAsync(int id)
+        //Delete by id
+        [HttpDelete("DeleteById/{id}")]
+        public async Task<ActionResult> DeleteById(int id)
         {
             try
             {
                 var event_entity = await _ADOuow._tagRepository.GetAsync(id);
                 if (event_entity == null)
                 {
-                    _logger.LogInformation($"Івент із Id: {id}, не був знайдейний у базі даних");
+                    _logger.LogInformation($"There is no object with id {id} in database (DeleteByIdAsync)");
                     return NotFound();
                 }
 
@@ -143,8 +143,8 @@ namespace PhrasesApi.Controllers
             }
             catch (Exception ex)
             {
-                _logger.LogError($"Транзакція сфейлилась! Щось пішло не так у методі GetAllEventsAsync() - {ex.Message}");
-                return StatusCode(StatusCodes.Status500InternalServerError, "вот так вот!");
+                _logger.LogError($"Error (DeleteByIdAsync) - {ex.Message}");
+                return StatusCode(StatusCodes.Status500InternalServerError, "error");
             }
         }
     }

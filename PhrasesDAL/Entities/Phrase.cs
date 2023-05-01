@@ -12,8 +12,10 @@ namespace PhrasesDAL.Entities
 
         public string? Description { get; set; }
 
+        public int Likes { get; set; }
+
         public int Id { get; set; }
 
-        public int CommentId { get; set; }
+        public int TagId { get; set; }
     }
 }

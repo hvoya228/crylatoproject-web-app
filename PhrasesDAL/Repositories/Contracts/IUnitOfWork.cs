@@ -10,7 +10,6 @@ namespace PhrasesDAL.Repositories.Contracts
     {
         IPhraseRepository _phraseRepository { get; }
         ITagRepository _tagRepository { get; }
-        ILikeRepository _likeRepository { get; }
         void Commit();
         new void Dispose();
     }

@@ -7,17 +7,14 @@ namespace PhrasesDAL.Repositories
     {
         public IPhraseRepository _phraseRepository { get; }
         public ITagRepository _tagRepository { get; }
-        public ILikeRepository _likeRepository { get; }
-
 
         readonly IDbTransaction _dbTransaction;
 
-        public UnitOfWork(IPhraseRepository phraseRepository, ITagRepository tagRepository, ILikeRepository likeRepository,
+        public UnitOfWork(IPhraseRepository phraseRepository, ITagRepository tagRepository,
                           IDbTransaction dbTransaction)
         {
             _phraseRepository = phraseRepository;
             _tagRepository = tagRepository;
-            _likeRepository = likeRepository;
             _dbTransaction = dbTransaction;
         }
 

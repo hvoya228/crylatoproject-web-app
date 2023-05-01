@@ -13,7 +13,7 @@ namespace PhrasesDAL.Repositories
     public class TagRepository : GenericRepository<Tag>, ITagRepository
     {
         public TagRepository(SqlConnection sqlConnection, IDbTransaction dbTransaction) : 
-                           base(sqlConnection, dbTransaction, "Phrases.Tag")
+                           base(sqlConnection, dbTransaction, "Tag")
         {
         }
     }

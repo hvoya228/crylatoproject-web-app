@@ -23,7 +23,6 @@ builder.Services.AddScoped<IDbTransaction>(s =>
 // Dependendency Injection
 builder.Services.AddScoped<IPhraseRepository, PhraseRepository>();
 builder.Services.AddScoped<ITagRepository, TagRepository>();
-builder.Services.AddScoped<ILikeRepository, LikeRepository>();
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 //
 
