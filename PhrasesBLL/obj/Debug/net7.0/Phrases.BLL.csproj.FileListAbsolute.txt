@@ -1,0 +1,17 @@
+D:\Table\Projects\websites\CrylatoProject\PhrasesBLL\bin\Debug\net7.0\Phrases.BLL.deps.json
+D:\Table\Projects\websites\CrylatoProject\PhrasesBLL\bin\Debug\net7.0\Phrases.BLL.dll
+D:\Table\Projects\websites\CrylatoProject\PhrasesBLL\bin\Debug\net7.0\Phrases.BLL.pdb
+D:\Table\Projects\websites\CrylatoProject\PhrasesBLL\bin\Debug\net7.0\Phrases.DAL.dll
+D:\Table\Projects\websites\CrylatoProject\PhrasesBLL\bin\Debug\net7.0\Phrases.Data.dll
+D:\Table\Projects\websites\CrylatoProject\PhrasesBLL\bin\Debug\net7.0\Phrases.DAL.pdb
+D:\Table\Projects\websites\CrylatoProject\PhrasesBLL\bin\Debug\net7.0\Phrases.Data.pdb
+D:\Table\Projects\websites\CrylatoProject\PhrasesBLL\obj\Debug\net7.0\Phrases.BLL.csproj.AssemblyReference.cache
+D:\Table\Projects\websites\CrylatoProject\PhrasesBLL\obj\Debug\net7.0\Phrases.BLL.GeneratedMSBuildEditorConfig.editorconfig
+D:\Table\Projects\websites\CrylatoProject\PhrasesBLL\obj\Debug\net7.0\Phrases.BLL.AssemblyInfoInputs.cache
+D:\Table\Projects\websites\CrylatoProject\PhrasesBLL\obj\Debug\net7.0\Phrases.BLL.AssemblyInfo.cs
+D:\Table\Projects\websites\CrylatoProject\PhrasesBLL\obj\Debug\net7.0\Phrases.BLL.csproj.CoreCompileInputs.cache
+D:\Table\Projects\websites\CrylatoProject\PhrasesBLL\obj\Debug\net7.0\Phrases.BLL.csproj.CopyComplete
+D:\Table\Projects\websites\CrylatoProject\PhrasesBLL\obj\Debug\net7.0\Phrases.BLL.dll
+D:\Table\Projects\websites\CrylatoProject\PhrasesBLL\obj\Debug\net7.0\refint\Phrases.BLL.dll
+D:\Table\Projects\websites\CrylatoProject\PhrasesBLL\obj\Debug\net7.0\Phrases.BLL.pdb
+D:\Table\Projects\websites\CrylatoProject\PhrasesBLL\obj\Debug\net7.0\ref\Phrases.BLL.dll

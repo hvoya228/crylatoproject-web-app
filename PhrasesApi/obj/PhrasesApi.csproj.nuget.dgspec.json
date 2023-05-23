@@ -28,6 +28,9 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
+              "D:\\Table\\Projects\\websites\\CrylatoProject\\PhrasesBLL\\PhrasesBLL.csproj": {
+                "projectPath": "D:\\Table\\Projects\\websites\\CrylatoProject\\PhrasesBLL\\PhrasesBLL.csproj"
+              },
               "D:\\Table\\Projects\\websites\\CrylatoProject\\PhrasesDAL\\PhrasesDAL.csproj": {
                 "projectPath": "D:\\Table\\Projects\\websites\\CrylatoProject\\PhrasesDAL\\PhrasesDAL.csproj"
               }
@@ -72,6 +75,68 @@
         }
       }
     },
+    "D:\\Table\\Projects\\websites\\CrylatoProject\\PhrasesBLL\\PhrasesBLL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Table\\Projects\\websites\\CrylatoProject\\PhrasesBLL\\PhrasesBLL.csproj",
+        "projectName": "PhrasesBLL",
+        "projectPath": "D:\\Table\\Projects\\websites\\CrylatoProject\\PhrasesBLL\\PhrasesBLL.csproj",
+        "packagesPath": "C:\\Users\\Oleh\\.nuget\\packages\\",
+        "outputPath": "D:\\Table\\Projects\\websites\\CrylatoProject\\PhrasesBLL\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Oleh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "D:\\Table\\Projects\\websites\\CrylatoProject\\PhrasesDAL\\PhrasesDAL.csproj": {
+                "projectPath": "D:\\Table\\Projects\\websites\\CrylatoProject\\PhrasesDAL\\PhrasesDAL.csproj"
+              },
+              "D:\\Table\\Projects\\websites\\CrylatoProject\\PhrasesData\\Phrases.Data.csproj": {
+                "projectPath": "D:\\Table\\Projects\\websites\\CrylatoProject\\PhrasesData\\Phrases.Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "D:\\Table\\Projects\\websites\\CrylatoProject\\PhrasesDAL\\PhrasesDAL.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -80,6 +145,75 @@
         "projectPath": "D:\\Table\\Projects\\websites\\CrylatoProject\\PhrasesDAL\\PhrasesDAL.csproj",
         "packagesPath": "C:\\Users\\Oleh\\.nuget\\packages\\",
         "outputPath": "D:\\Table\\Projects\\websites\\CrylatoProject\\PhrasesDAL\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Oleh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "D:\\Table\\Projects\\websites\\CrylatoProject\\PhrasesData\\Phrases.Data.csproj": {
+                "projectPath": "D:\\Table\\Projects\\websites\\CrylatoProject\\PhrasesData\\Phrases.Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.123, )"
+            },
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[5.1.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Table\\Projects\\websites\\CrylatoProject\\PhrasesData\\Phrases.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Table\\Projects\\websites\\CrylatoProject\\PhrasesData\\Phrases.Data.csproj",
+        "projectName": "Phrases.Data",
+        "projectPath": "D:\\Table\\Projects\\websites\\CrylatoProject\\PhrasesData\\Phrases.Data.csproj",
+        "packagesPath": "C:\\Users\\Oleh\\.nuget\\packages\\",
+        "outputPath": "D:\\Table\\Projects\\websites\\CrylatoProject\\PhrasesData\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Oleh\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -107,16 +241,6 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "dependencies": {
-            "Dapper": {
-              "target": "Package",
-              "version": "[2.0.123, )"
-            },
-            "Microsoft.Data.SqlClient": {
-              "target": "Package",
-              "version": "[5.1.1, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",

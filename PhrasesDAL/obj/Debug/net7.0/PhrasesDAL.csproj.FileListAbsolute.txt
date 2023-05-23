@@ -10,3 +10,6 @@ D:\Table\Projects\websites\CrylatoProject\PhrasesDAL\obj\Debug\net7.0\PhrasesDAL
 D:\Table\Projects\websites\CrylatoProject\PhrasesDAL\obj\Debug\net7.0\refint\PhrasesDAL.dll
 D:\Table\Projects\websites\CrylatoProject\PhrasesDAL\obj\Debug\net7.0\PhrasesDAL.pdb
 D:\Table\Projects\websites\CrylatoProject\PhrasesDAL\obj\Debug\net7.0\ref\PhrasesDAL.dll
+D:\Table\Projects\websites\CrylatoProject\PhrasesDAL\bin\Debug\net7.0\PhrasesData.dll
+D:\Table\Projects\websites\CrylatoProject\PhrasesDAL\bin\Debug\net7.0\PhrasesData.pdb
+D:\Table\Projects\websites\CrylatoProject\PhrasesDAL\obj\Debug\net7.0\PhrasesDAL.csproj.CopyComplete

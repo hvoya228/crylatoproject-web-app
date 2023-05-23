@@ -1,5 +1,5 @@
-﻿using CommentsDAL.Configuration;
-using CommentsDAL.Entities;
+﻿using Comments.DAL.Configuration;
+using Comments.DAL.Entities;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CommentsDAL.Data
+namespace Comments.DAL.Data
 {
     public class CommentsContext : DbContext
     {

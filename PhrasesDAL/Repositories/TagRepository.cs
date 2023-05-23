@@ -1,20 +1,13 @@
 ﻿using Microsoft.Data.SqlClient;
-using PhrasesDAL.Entities;
-using PhrasesDAL.Repositories.Contracts;
-using System;
-using System.Collections.Generic;
+using Phrases.DAL.Repositories.Intefaces;
+using Phrases.Data.Models;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace PhrasesDAL.Repositories
+namespace Phrases.DAL.Repositories
 {
     public class TagRepository : GenericRepository<Tag>, ITagRepository
     {
         public TagRepository(SqlConnection sqlConnection, IDbTransaction dbTransaction) : 
-                           base(sqlConnection, dbTransaction, "Tag")
-        {
-        }
+                        base(sqlConnection, dbTransaction, "Phrases.Tag"){}
     }
 }

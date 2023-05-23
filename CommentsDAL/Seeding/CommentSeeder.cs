@@ -1,5 +1,5 @@
-﻿using CommentsDAL.Entities;
-using CommentsDAL.Interfaces;
+﻿using Comments.DAL.Entities;
+using Comments.DAL.Interfaces;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CommentsDAL.Seeding
+namespace Comments.DAL.Seeding
 {
     public class CommentSeeder : ISeeder<Comment>
     {

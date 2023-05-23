@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CommentsDAL.Entities
+namespace Comments.DAL.Entities
 {
     public class Comment
     {

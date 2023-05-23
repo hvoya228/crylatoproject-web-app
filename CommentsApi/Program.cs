@@ -1,7 +1,7 @@
-using CommentsDAL.Data;
-using CommentsDAL.Data.Repositories;
-using CommentsDAL.Interfaces;
-using CommentsDAL.Interfaces.Repositories;
+using Comments.DAL.Data;
+using Comments.DAL.Data.Repositories;
+using Comments.DAL.Interfaces;
+using Comments.DAL.Interfaces.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 

@@ -1,8 +1,8 @@
-﻿using CommentsDAL.Entities;
-using CommentsDAL.Interfaces;
+﻿using Comments.DAL.Entities;
+using Comments.DAL.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
-namespace CommentsApi.Controllers
+namespace Comments.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

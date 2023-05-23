@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CommentsDAL.Interfaces
+namespace Comments.DAL.Interfaces
 {
     public interface ISeeder<T> where T : class
     {

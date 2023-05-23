@@ -1,20 +1,22 @@
-﻿using PhrasesDAL.Repositories.Contracts;
+﻿using Phrases.DAL.Repositories.Intefaces;
 using System.Data;
 
-namespace PhrasesDAL.Repositories
+namespace Phrases.DAL.Repositories
 {
     public class UnitOfWork : IUnitOfWork, IDisposable
     {
         public IPhraseRepository _phraseRepository { get; }
         public ITagRepository _tagRepository { get; }
+        public IRegionRepository _regionRepository { get; }
 
         readonly IDbTransaction _dbTransaction;
 
-        public UnitOfWork(IPhraseRepository phraseRepository, ITagRepository tagRepository,
-                          IDbTransaction dbTransaction)
+        public UnitOfWork(IPhraseRepository phraseRepository, ITagRepository tagRepository, 
+                          IRegionRepository regionRepository, IDbTransaction dbTransaction)
         {
             _phraseRepository = phraseRepository;
             _tagRepository = tagRepository;
+            _regionRepository = regionRepository;
             _dbTransaction = dbTransaction;
         }
 
@@ -23,8 +25,6 @@ namespace PhrasesDAL.Repositories
             try
             {
                 _dbTransaction.Commit();
-                // By adding this we can have muliple transactions as part of a single request
-                //_dbTransaction.Connection.BeginTransaction();
             }
             catch (Exception ex)
             {

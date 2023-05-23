@@ -1,11 +1,11 @@
-﻿using CommentsDAL.Entities;
+﻿using Comments.DAL.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CommentsDAL.Interfaces.Repositories
+namespace Comments.DAL.Interfaces.Repositories
 {
     public interface IReactionsRepository : IRepository<Reaction>
     {

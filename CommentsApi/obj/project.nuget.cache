@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dIVoHrnWq1k7tBnbX6vgseAUqUandq29UbwZ6U+AoX72x577JbvTc405pYHG583Bqp/zZsk2Nfyg+df3vRBk5g==",
+  "dgSpecHash": "LYXBITn4X5svX/Mkbd8uRy6z4EkhLaIBuZrqXqEsM76pbreGbzO40hYq62NYhSjNlMz6C2X+EasUCWaoJFqk/A==",
   "success": true,
-  "projectFilePath": "D:\\Table\\Projects\\websites\\CrylatoProject\\CommentsApi\\CommentsApi.csproj",
+  "projectFilePath": "D:\\Table\\Projects\\websites\\CrylatoProject\\CommentsApi\\Comments.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Oleh\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Oleh\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

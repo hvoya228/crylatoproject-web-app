@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xMgXz4HPaNpqt0DovWoodulRdhgDNq0R71Gsq4ecpXRuCSLibyG1ZPLewJ5OQqdaaFSqfSvBwC/7zLnviTL7mg==",
+  "dgSpecHash": "xbmKktHPWXCaN1TxW1CP/cHaQitKA+4Cbh38zMC4gw5s5r0L8HpgRxdYm+U7aaVrjMu2cwCrokluGy5XDsPbRw==",
   "success": true,
-  "projectFilePath": "D:\\Table\\Projects\\websites\\CrylatoProject\\CommentsDAL\\CommentsDAL.csproj",
+  "projectFilePath": "D:\\Table\\Projects\\websites\\CrylatoProject\\CommentsDAL\\Comments.DAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Oleh\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Oleh\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

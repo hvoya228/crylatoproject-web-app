@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XzC79EWEMf0ehMLJfcZca9Wa+Tj1WYu+SYE7fiZppkaBPSqPHXLEeUwDm3p2eA/vx14goqEG3QOT4AEWRGNdGw==",
+  "dgSpecHash": "D6jdOAanM1yBXTGED8ayDi2wFYen0D5xs4mFPGBui/RTT8Ai1VdGyX0OHZqZqSKpTk22phT77TVWfRtUcppUpw==",
   "success": true,
-  "projectFilePath": "D:\\Table\\Projects\\websites\\CrylatoProject\\PhrasesDAL\\PhrasesDAL.csproj",
+  "projectFilePath": "D:\\Table\\Projects\\websites\\CrylatoProject\\PhrasesDAL\\Phrases.DAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Oleh\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Oleh\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

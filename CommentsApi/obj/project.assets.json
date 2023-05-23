@@ -1208,7 +1208,7 @@
           }
         }
       },
-      "CommentsDAL/1.0.0": {
+      "Comments.DAL/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
@@ -1216,10 +1216,10 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.5"
         },
         "compile": {
-          "bin/placeholder/CommentsDAL.dll": {}
+          "bin/placeholder/Comments.DAL.dll": {}
         },
         "runtime": {
-          "bin/placeholder/CommentsDAL.dll": {}
+          "bin/placeholder/Comments.DAL.dll": {}
         }
       }
     }
@@ -3642,15 +3642,15 @@
         "version.txt"
       ]
     },
-    "CommentsDAL/1.0.0": {
+    "Comments.DAL/1.0.0": {
       "type": "project",
-      "path": "../CommentsDAL/CommentsDAL.csproj",
-      "msbuildProject": "../CommentsDAL/CommentsDAL.csproj"
+      "path": "../CommentsDAL/Comments.DAL.csproj",
+      "msbuildProject": "../CommentsDAL/Comments.DAL.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
-      "CommentsDAL >= 1.0.0",
+      "Comments.DAL >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.5",
       "Swashbuckle.AspNetCore >= 6.2.3"
     ]
@@ -3661,9 +3661,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Table\\Projects\\websites\\CrylatoProject\\CommentsApi\\CommentsApi.csproj",
-      "projectName": "CommentsApi",
-      "projectPath": "D:\\Table\\Projects\\websites\\CrylatoProject\\CommentsApi\\CommentsApi.csproj",
+      "projectUniqueName": "D:\\Table\\Projects\\websites\\CrylatoProject\\CommentsApi\\Comments.Api.csproj",
+      "projectName": "Comments.Api",
+      "projectPath": "D:\\Table\\Projects\\websites\\CrylatoProject\\CommentsApi\\Comments.Api.csproj",
       "packagesPath": "C:\\Users\\Oleh\\.nuget\\packages\\",
       "outputPath": "D:\\Table\\Projects\\websites\\CrylatoProject\\CommentsApi\\obj\\",
       "projectStyle": "PackageReference",
@@ -3682,8 +3682,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\Table\\Projects\\websites\\CrylatoProject\\CommentsDAL\\CommentsDAL.csproj": {
-              "projectPath": "D:\\Table\\Projects\\websites\\CrylatoProject\\CommentsDAL\\CommentsDAL.csproj"
+            "D:\\Table\\Projects\\websites\\CrylatoProject\\CommentsDAL\\Comments.DAL.csproj": {
+              "projectPath": "D:\\Table\\Projects\\websites\\CrylatoProject\\CommentsDAL\\Comments.DAL.csproj"
             }
           }
         }

@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "RdbDJK4KF728A6+iJV4e4vVRTfQd+dCOKKaZM8z7T58=",
-  "Source": "PhrasesApi",
-  "BasePath": "_content/PhrasesApi",
+  "Hash": "kTHDKUuFLlGayRB9Zx1sF1qffr40KJaGuubSA6bmlwo=",
+  "Source": "Phrases.API",
+  "BasePath": "_content/Phrases.API",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],

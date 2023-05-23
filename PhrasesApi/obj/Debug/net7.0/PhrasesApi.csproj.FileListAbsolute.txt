@@ -67,3 +67,7 @@ D:\Table\Projects\websites\CrylatoProject\PhrasesApi\obj\Debug\net7.0\refint\Phr
 D:\Table\Projects\websites\CrylatoProject\PhrasesApi\obj\Debug\net7.0\PhrasesApi.pdb
 D:\Table\Projects\websites\CrylatoProject\PhrasesApi\obj\Debug\net7.0\PhrasesApi.genruntimeconfig.cache
 D:\Table\Projects\websites\CrylatoProject\PhrasesApi\obj\Debug\net7.0\ref\PhrasesApi.dll
+D:\Table\Projects\websites\CrylatoProject\PhrasesApi\bin\Debug\net7.0\PhrasesData.dll
+D:\Table\Projects\websites\CrylatoProject\PhrasesApi\bin\Debug\net7.0\PhrasesData.pdb
+D:\Table\Projects\websites\CrylatoProject\PhrasesApi\bin\Debug\net7.0\PhrasesBLL.dll
+D:\Table\Projects\websites\CrylatoProject\PhrasesApi\bin\Debug\net7.0\PhrasesBLL.pdb

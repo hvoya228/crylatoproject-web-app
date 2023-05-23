@@ -1,5 +1,5 @@
-﻿using CommentsDAL.Entities;
-using CommentsDAL.Seeding;
+﻿using Comments.DAL.Entities;
+using Comments.DAL.Seeding;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CommentsDAL.Configuration
+namespace Comments.DAL.Configuration
 {
     public class ReactionConfiguration : IEntityTypeConfiguration<Reaction>
     {

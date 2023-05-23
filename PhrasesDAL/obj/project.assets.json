@@ -724,6 +724,16 @@
             "rid": "win"
           }
         }
+      },
+      "Phrases.Data/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/Phrases.Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Phrases.Data.dll": {}
+        }
       }
     }
   },
@@ -2026,12 +2036,18 @@
         "system.windows.extensions.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "Phrases.Data/1.0.0": {
+      "type": "project",
+      "path": "../PhrasesData/Phrases.Data.csproj",
+      "msbuildProject": "../PhrasesData/Phrases.Data.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
       "Dapper >= 2.0.123",
-      "Microsoft.Data.SqlClient >= 5.1.1"
+      "Microsoft.Data.SqlClient >= 5.1.1",
+      "Phrases.Data >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -2040,9 +2056,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Table\\Projects\\websites\\CrylatoProject\\PhrasesDAL\\PhrasesDAL.csproj",
-      "projectName": "PhrasesDAL",
-      "projectPath": "D:\\Table\\Projects\\websites\\CrylatoProject\\PhrasesDAL\\PhrasesDAL.csproj",
+      "projectUniqueName": "D:\\Table\\Projects\\websites\\CrylatoProject\\PhrasesDAL\\Phrases.DAL.csproj",
+      "projectName": "Phrases.DAL",
+      "projectPath": "D:\\Table\\Projects\\websites\\CrylatoProject\\PhrasesDAL\\Phrases.DAL.csproj",
       "packagesPath": "C:\\Users\\Oleh\\.nuget\\packages\\",
       "outputPath": "D:\\Table\\Projects\\websites\\CrylatoProject\\PhrasesDAL\\obj\\",
       "projectStyle": "PackageReference",
@@ -2060,7 +2076,11 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\Table\\Projects\\websites\\CrylatoProject\\PhrasesData\\Phrases.Data.csproj": {
+              "projectPath": "D:\\Table\\Projects\\websites\\CrylatoProject\\PhrasesData\\Phrases.Data.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

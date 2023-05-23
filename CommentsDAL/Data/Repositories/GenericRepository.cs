@@ -1,5 +1,5 @@
-﻿using CommentsDAL.Exceptions;
-using CommentsDAL.Interfaces.Repositories;
+﻿using Comments.DAL.Exceptions;
+using Comments.DAL.Interfaces.Repositories;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CommentsDAL.Data.Repositories
+namespace Comments.DAL.Data.Repositories
 {
     public abstract class GenericRepository<TEntity> : IRepository<TEntity> where TEntity : class
     {
@@ -19,9 +19,7 @@ namespace CommentsDAL.Data.Repositories
 
         public virtual async Task<TEntity> GetByIdAsync(int id)
         {
-            return await table.FindAsync(id)
-                ?? throw new EntityNotFoundException(
-                    GetEntityNotFoundErrorMessage(id));
+            return await table.FindAsync(id);
         }
 
         public abstract Task<TEntity> GetCompleteEntityAsync(int id);

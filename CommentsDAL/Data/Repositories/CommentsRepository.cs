@@ -1,12 +1,12 @@
-﻿using CommentsDAL.Entities;
-using CommentsDAL.Interfaces.Repositories;
+﻿using Comments.DAL.Entities;
+using Comments.DAL.Interfaces.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CommentsDAL.Data.Repositories
+namespace Comments.DAL.Data.Repositories
 {
     public class CommentsRepository : GenericRepository<Comment>, ICommentsRepository
     {

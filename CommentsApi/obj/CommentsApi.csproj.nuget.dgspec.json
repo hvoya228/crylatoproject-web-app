@@ -28,8 +28,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\Table\\Projects\\websites\\CrylatoProject\\CommentsDAL\\CommentsDAL.csproj": {
-                "projectPath": "D:\\Table\\Projects\\websites\\CrylatoProject\\CommentsDAL\\CommentsDAL.csproj"
+              "D:\\Table\\Projects\\websites\\CrylatoProject\\CommentsDAL\\Comments.DAL.csproj": {
+                "projectPath": "D:\\Table\\Projects\\websites\\CrylatoProject\\CommentsDAL\\Comments.DAL.csproj"
               }
             }
           }
@@ -78,12 +78,12 @@
         }
       }
     },
-    "D:\\Table\\Projects\\websites\\CrylatoProject\\CommentsDAL\\CommentsDAL.csproj": {
+    "D:\\Table\\Projects\\websites\\CrylatoProject\\CommentsDAL\\Comments.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Table\\Projects\\websites\\CrylatoProject\\CommentsDAL\\CommentsDAL.csproj",
-        "projectName": "CommentsDAL",
-        "projectPath": "D:\\Table\\Projects\\websites\\CrylatoProject\\CommentsDAL\\CommentsDAL.csproj",
+        "projectUniqueName": "D:\\Table\\Projects\\websites\\CrylatoProject\\CommentsDAL\\Comments.DAL.csproj",
+        "projectName": "Comments.DAL",
+        "projectPath": "D:\\Table\\Projects\\websites\\CrylatoProject\\CommentsDAL\\Comments.DAL.csproj",
         "packagesPath": "C:\\Users\\Oleh\\.nuget\\packages\\",
         "outputPath": "D:\\Table\\Projects\\websites\\CrylatoProject\\CommentsDAL\\obj\\",
         "projectStyle": "PackageReference",

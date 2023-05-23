@@ -1,7 +1,9 @@
-using PhrasesDAL.Repositories.Contracts;
+using Phrases.DAL.Repositories.Intefaces;
 using System.Data;
-using PhrasesDAL.Repositories;
+using Phrases.DAL.Repositories;
 using Microsoft.Data.SqlClient;
+using Phrases.BLL.Repositories.Interfaces;
+using Phrases.BLL.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,13 +20,13 @@ builder.Services.AddScoped<IDbTransaction>(s =>
     conn.Open();
     return conn.BeginTransaction();
 });
-//
 
-// Dependendency Injection
+//Dependency injection
 builder.Services.AddScoped<IPhraseRepository, PhraseRepository>();
 builder.Services.AddScoped<ITagRepository, TagRepository>();
+builder.Services.AddScoped<IRegionRepository, RegionRepository>();
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
-//
+builder.Services.AddScoped<IPhraseService, PhraseService>();
 
 var app = builder.Build();
 
@@ -35,9 +37,6 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
 app.UseAuthorization();
-
 app.MapControllers();
-
 app.Run();

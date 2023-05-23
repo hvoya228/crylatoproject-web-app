@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "fZSzWzIaN+zaNZQrpXs8l/C1CAHXXlreCNXFZ6m4cnY=",
-  "Source": "CommentsApi",
-  "BasePath": "_content/CommentsApi",
+  "Hash": "6op/uaS/3UTNTK/Z/LUdixsPTpvAf2QjghT+zf3EXvE=",
+  "Source": "Comments.Api",
+  "BasePath": "_content/Comments.Api",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],

@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v7.0": {
       "PhrasesApi/1.0.0": {
         "dependencies": {
+          "PhrasesBLL": "1.0.0",
           "PhrasesDAL": "1.0.0",
           "Swashbuckle.AspNetCore": "6.2.3"
         },
@@ -460,13 +461,28 @@
           }
         }
       },
+      "PhrasesBLL/1.0.0": {
+        "dependencies": {
+          "PhrasesDAL": "1.0.0",
+          "PhrasesData": "1.0.0"
+        },
+        "runtime": {
+          "PhrasesBLL.dll": {}
+        }
+      },
       "PhrasesDAL/1.0.0": {
         "dependencies": {
           "Dapper": "2.0.123",
-          "Microsoft.Data.SqlClient": "5.1.1"
+          "Microsoft.Data.SqlClient": "5.1.1",
+          "PhrasesData": "1.0.0"
         },
         "runtime": {
           "PhrasesDAL.dll": {}
+        }
+      },
+      "PhrasesData/1.0.0": {
+        "runtime": {
+          "PhrasesData.dll": {}
         }
       }
     }
@@ -806,7 +822,17 @@
       "path": "system.windows.extensions/6.0.0",
       "hashPath": "system.windows.extensions.6.0.0.nupkg.sha512"
     },
+    "PhrasesBLL/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "PhrasesDAL/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PhrasesData/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

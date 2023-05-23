@@ -1,0 +1,12 @@
+D:\Table\Projects\websites\CrylatoProject\PhrasesData\bin\Debug\net7.0\PhrasesData.deps.json
+D:\Table\Projects\websites\CrylatoProject\PhrasesData\bin\Debug\net7.0\PhrasesData.dll
+D:\Table\Projects\websites\CrylatoProject\PhrasesData\bin\Debug\net7.0\PhrasesData.pdb
+D:\Table\Projects\websites\CrylatoProject\PhrasesData\obj\Debug\net7.0\PhrasesData.csproj.AssemblyReference.cache
+D:\Table\Projects\websites\CrylatoProject\PhrasesData\obj\Debug\net7.0\PhrasesData.GeneratedMSBuildEditorConfig.editorconfig
+D:\Table\Projects\websites\CrylatoProject\PhrasesData\obj\Debug\net7.0\PhrasesData.AssemblyInfoInputs.cache
+D:\Table\Projects\websites\CrylatoProject\PhrasesData\obj\Debug\net7.0\PhrasesData.AssemblyInfo.cs
+D:\Table\Projects\websites\CrylatoProject\PhrasesData\obj\Debug\net7.0\PhrasesData.csproj.CoreCompileInputs.cache
+D:\Table\Projects\websites\CrylatoProject\PhrasesData\obj\Debug\net7.0\PhrasesData.dll
+D:\Table\Projects\websites\CrylatoProject\PhrasesData\obj\Debug\net7.0\refint\PhrasesData.dll
+D:\Table\Projects\websites\CrylatoProject\PhrasesData\obj\Debug\net7.0\PhrasesData.pdb
+D:\Table\Projects\websites\CrylatoProject\PhrasesData\obj\Debug\net7.0\ref\PhrasesData.dll

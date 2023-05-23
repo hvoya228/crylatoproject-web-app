@@ -812,18 +812,43 @@
           }
         }
       },
-      "PhrasesDAL/1.0.0": {
+      "Phrases.BLL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Phrases.DAL": "1.0.0",
+          "Phrases.Data": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Phrases.BLL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Phrases.BLL.dll": {}
+        }
+      },
+      "Phrases.DAL/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
           "Dapper": "2.0.123",
-          "Microsoft.Data.SqlClient": "5.1.1"
+          "Microsoft.Data.SqlClient": "5.1.1",
+          "Phrases.Data": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/PhrasesDAL.dll": {}
+          "bin/placeholder/Phrases.DAL.dll": {}
         },
         "runtime": {
-          "bin/placeholder/PhrasesDAL.dll": {}
+          "bin/placeholder/Phrases.DAL.dll": {}
+        }
+      },
+      "Phrases.Data/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/Phrases.Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Phrases.Data.dll": {}
         }
       }
     }
@@ -2253,15 +2278,26 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "PhrasesDAL/1.0.0": {
+    "Phrases.BLL/1.0.0": {
       "type": "project",
-      "path": "../PhrasesDAL/PhrasesDAL.csproj",
-      "msbuildProject": "../PhrasesDAL/PhrasesDAL.csproj"
+      "path": "../PhrasesBLL/Phrases.BLL.csproj",
+      "msbuildProject": "../PhrasesBLL/Phrases.BLL.csproj"
+    },
+    "Phrases.DAL/1.0.0": {
+      "type": "project",
+      "path": "../PhrasesDAL/Phrases.DAL.csproj",
+      "msbuildProject": "../PhrasesDAL/Phrases.DAL.csproj"
+    },
+    "Phrases.Data/1.0.0": {
+      "type": "project",
+      "path": "../PhrasesData/Phrases.Data.csproj",
+      "msbuildProject": "../PhrasesData/Phrases.Data.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
-      "PhrasesDAL >= 1.0.0",
+      "Phrases.BLL >= 1.0.0",
+      "Phrases.DAL >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.2.3"
     ]
   },
@@ -2271,9 +2307,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Table\\Projects\\websites\\CrylatoProject\\PhrasesApi\\PhrasesApi.csproj",
-      "projectName": "PhrasesApi",
-      "projectPath": "D:\\Table\\Projects\\websites\\CrylatoProject\\PhrasesApi\\PhrasesApi.csproj",
+      "projectUniqueName": "D:\\Table\\Projects\\websites\\CrylatoProject\\PhrasesApi\\Phrases.API.csproj",
+      "projectName": "Phrases.API",
+      "projectPath": "D:\\Table\\Projects\\websites\\CrylatoProject\\PhrasesApi\\Phrases.API.csproj",
       "packagesPath": "C:\\Users\\Oleh\\.nuget\\packages\\",
       "outputPath": "D:\\Table\\Projects\\websites\\CrylatoProject\\PhrasesApi\\obj\\",
       "projectStyle": "PackageReference",
@@ -2292,8 +2328,11 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\Table\\Projects\\websites\\CrylatoProject\\PhrasesDAL\\PhrasesDAL.csproj": {
-              "projectPath": "D:\\Table\\Projects\\websites\\CrylatoProject\\PhrasesDAL\\PhrasesDAL.csproj"
+            "D:\\Table\\Projects\\websites\\CrylatoProject\\PhrasesBLL\\Phrases.BLL.csproj": {
+              "projectPath": "D:\\Table\\Projects\\websites\\CrylatoProject\\PhrasesBLL\\Phrases.BLL.csproj"
+            },
+            "D:\\Table\\Projects\\websites\\CrylatoProject\\PhrasesDAL\\Phrases.DAL.csproj": {
+              "projectPath": "D:\\Table\\Projects\\websites\\CrylatoProject\\PhrasesDAL\\Phrases.DAL.csproj"
             }
           }
         }

@@ -1,12 +1,12 @@
-﻿using CommentsDAL.Interfaces;
-using CommentsDAL.Interfaces.Repositories;
+﻿using Comments.DAL.Interfaces;
+using Comments.DAL.Interfaces.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CommentsDAL.Data.Repositories
+namespace Comments.DAL.Data.Repositories
 {
     public class UnitOfWork : IUnitOfWork
     {

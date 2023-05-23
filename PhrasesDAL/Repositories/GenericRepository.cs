@@ -1,12 +1,13 @@
 ﻿using Microsoft.Data.SqlClient;
-using PhrasesDAL.Repositories.Contracts;
+using Phrases.DAL.Repositories.Intefaces;
 using System.ComponentModel;
 using System.Data;
 using System.Reflection;
 using System.Text;
 using Dapper;
+using System.Collections;
 
-namespace PhrasesDAL.Repositories
+namespace Phrases.DAL.Repositories
 {
     public class GenericRepository<T> : IGenericRepository<T> where T : class
     {
@@ -24,35 +25,38 @@ namespace PhrasesDAL.Repositories
         }
 
 
-        public async Task<IEnumerable<T>> GetAllAsync()
+        public async Task<List<T>> GetAllAsync()
         {
-            return await _sqlConnection.QueryAsync<T>($"SELECT * FROM {_tableName}",
-                transaction: _dbTransaction);
+            var result = await _sqlConnection.QueryAsync<T>($"SELECT * FROM {_tableName}", transaction: _dbTransaction);
+
+            return result.ToList();
         }
 
-        public async Task<T> GetAsync(int id)
+        public async Task<T> GetAsync(Guid id)
         {
-            var result = await _sqlConnection.QuerySingleOrDefaultAsync<T>($"SELECT * FROM {_tableName} WHERE Id=@Id",
+            var result = await _sqlConnection.QuerySingleOrDefaultAsync<T>($"SELECT * FROM {_tableName} WHERE ID=@Id",
                 param: new { Id = id },
                 transaction: _dbTransaction);
-            if (result == null)
-                throw new KeyNotFoundException($"{_tableName} with id [{id}] could not be found.");
+
+            if (result == null) { throw new KeyNotFoundException($"{_tableName} with id [{id}] could not be found."); }
+
             return result;
         }
 
-        public async Task DeleteAsync(int id)
+        public async Task DeleteAsync(Guid id)
         {
-            await _sqlConnection.ExecuteAsync($"DELETE FROM {_tableName} WHERE Id=@Id",
-                param: new { Id = id },
+            await _sqlConnection.ExecuteAsync($"DELETE FROM {_tableName} WHERE ID=@Id",
+                param: new { Id = id }, 
                 transaction: _dbTransaction);
         }
 
-        public async Task<int> AddAsync(T t)
+        public async Task<Guid> AddAsync(T t)
         {
             var insertQuery = GenerateInsertQuery();
-            var newId = await _sqlConnection.ExecuteScalarAsync<int>(insertQuery,
+            var newId = await _sqlConnection.ExecuteScalarAsync<Guid>(insertQuery,
                 param: t,
                 transaction: _dbTransaction);
+
             return newId;
         }
 
@@ -60,8 +64,10 @@ namespace PhrasesDAL.Repositories
         {
             var inserted = 0;
             var query = GenerateInsertQuery();
+
             inserted += await _sqlConnection.ExecuteAsync(query,
                 param: list);
+
             return inserted;
         }
 
@@ -69,6 +75,7 @@ namespace PhrasesDAL.Repositories
         public async Task ReplaceAsync(T t)
         {
             var updateQuery = GenerateUpdateQuery();
+
             await _sqlConnection.ExecuteAsync(updateQuery,
                 param: t,
                 transaction: _dbTransaction);
@@ -81,22 +88,26 @@ namespace PhrasesDAL.Repositories
             return (from prop in listOfProperties
                     let attributes = prop.GetCustomAttributes(typeof(DescriptionAttribute), false)
                     where attributes.Length <= 0 || (attributes[0] as DescriptionAttribute)?.Description != "ignore"
-                    select prop.Name).ToList();
+                    select prop.Name)
+                    .ToList();
         }
 
         private string GenerateUpdateQuery()
         {
             var updateQuery = new StringBuilder($"UPDATE {_tableName} SET ");
             var properties = GenerateListOfProperties(GetProperties);
+
             properties.ForEach(property =>
             {
-                if (!property.Equals("Id"))
+                if (!property.Equals("ID"))
                 {
                     updateQuery.Append($"{property}=@{property},");
                 }
             });
+
             updateQuery.Remove(updateQuery.Length - 1, 1);
-            updateQuery.Append(" WHERE Id=@Id");
+            updateQuery.Append(" WHERE ID=@Id");
+
             return updateQuery.ToString();
         }
 
@@ -106,7 +117,7 @@ namespace PhrasesDAL.Repositories
             insertQuery.Append("(");
             var properties = GenerateListOfProperties(GetProperties);
 
-            properties.Remove("Id");
+            properties.Remove("ID");
 
             properties.ForEach(prop => { insertQuery.Append($"[{prop}],"); });
             insertQuery
@@ -117,7 +128,9 @@ namespace PhrasesDAL.Repositories
             insertQuery
                 .Remove(insertQuery.Length - 1, 1)
                 .Append(")");
+
             insertQuery.Append("; SELECT SCOPE_IDENTITY()");
+
             return insertQuery.ToString();
         }
     }
