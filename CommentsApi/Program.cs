@@ -1,7 +1,9 @@
+using Comments.DAL;
 using Comments.DAL.Data;
 using Comments.DAL.Data.Repositories;
 using Comments.DAL.Interfaces;
 using Comments.DAL.Interfaces.Repositories;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,16 +13,15 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 //Connection to database
-builder.Services.AddDbContext<CommentsContext>(options =>
+builder.Services.AddDbContext<CommentsContext>(configurations =>
 {
-    //may be string !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    var connectionString = builder.Configuration.GetConnectionString("MSSQLConnectionCrylatoComments");
-    //options.UseSqlServer(connectionString);
+    configurations.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"),
+        options => options.MigrationsAssembly("Comments.Migrations"));
 });
 
-builder.Services.AddScoped<ICommentsRepository, CommentsRepository>();
-builder.Services.AddScoped<IReactionsRepository, ReactionsRepository>();
-builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+//builder.Services.AddScoped<ICommentsRepository, CommentsRepository>();
+//builder.Services.AddScoped<IReactionsRepository, ReactionsRepository>();
+//builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 
 var app = builder.Build();

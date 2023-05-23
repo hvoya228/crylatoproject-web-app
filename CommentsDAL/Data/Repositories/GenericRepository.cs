@@ -1,5 +1,4 @@
-﻿using Comments.DAL.Exceptions;
-using Comments.DAL.Interfaces.Repositories;
+﻿using Comments.DAL.Interfaces.Repositories;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;

@@ -1,5 +1,4 @@
-﻿using Comments.DAL.Entities;
-using Comments.DAL.Seeding;
+﻿using Comments.Data.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
@@ -10,27 +9,17 @@ using System.Threading.Tasks;
 
 namespace Comments.DAL.Configuration
 {
-    public class ReactionConfiguration : IEntityTypeConfiguration<Reaction>
+    public class ReactionConfiguration : IEntityTypeConfiguration<Reply>
     {
-        public void Configure(EntityTypeBuilder<Reaction> builder)
+        public void Configure(EntityTypeBuilder<Reply> builder)
         {
-            builder.Property(reaction => reaction.Id)
-                   .UseIdentityColumn()
-                   .IsRequired();
+            builder.Property(r => r.Text)
+                .HasMaxLength(500)
+                .IsRequired();
 
-            builder.Property(reaction => reaction.Type)
-                   .HasMaxLength(50);
-
-            builder.Property(reaction => reaction.Count)
-                   .HasDefaultValue(0);
-
-            builder.HasOne(reaction => reaction.Comment)
-                   .WithMany(comment => comment.Reactions)
-                   .HasForeignKey(reaction => reaction.CommentId)
-                   .OnDelete(DeleteBehavior.Cascade)
-                   .HasConstraintName("FK_Reactions_CommentId");
-
-            new ReactionSeeder().Seed(builder);
+            builder.HasOne(r => r.Comment)
+                .WithMany(c => c.Replies)
+                .HasForeignKey(r => r.CommentId);
         }
     }
 }

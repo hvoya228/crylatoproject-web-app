@@ -11,7 +11,7 @@ namespace Comments.DAL.Interfaces
     {
         ICommentsRepository CommentsRepository { get; }
 
-        IReactionsRepository ReactionsRepository { get; }
+        //IReactionsRepository ReactionsRepository { get; }
 
         Task SaveChangesAsync();
     }

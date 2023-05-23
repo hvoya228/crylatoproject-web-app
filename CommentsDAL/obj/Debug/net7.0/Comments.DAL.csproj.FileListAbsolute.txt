@@ -12,3 +12,6 @@ D:\Table\Projects\websites\CrylatoProject\CommentsDAL\obj\Debug\net7.0\refint\Co
 D:\Table\Projects\websites\CrylatoProject\CommentsDAL\obj\Debug\net7.0\Comments.DAL.pdb
 D:\Table\Projects\websites\CrylatoProject\CommentsDAL\obj\Debug\net7.0\Comments.DAL.genruntimeconfig.cache
 D:\Table\Projects\websites\CrylatoProject\CommentsDAL\obj\Debug\net7.0\ref\Comments.DAL.dll
+D:\Table\Projects\websites\CrylatoProject\CommentsDAL\bin\Debug\net7.0\Comments.Data.dll
+D:\Table\Projects\websites\CrylatoProject\CommentsDAL\bin\Debug\net7.0\Comments.Data.pdb
+D:\Table\Projects\websites\CrylatoProject\CommentsDAL\obj\Debug\net7.0\Comments.DAL.csproj.CopyComplete

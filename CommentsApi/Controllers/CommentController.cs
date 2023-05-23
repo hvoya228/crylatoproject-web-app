@@ -1,5 +1,5 @@
-﻿using Comments.DAL.Entities;
-using Comments.DAL.Interfaces;
+﻿using Comments.DAL.Interfaces;
+using Comments.Data.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Comments.API.Controllers

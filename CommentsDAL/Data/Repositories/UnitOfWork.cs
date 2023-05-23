@@ -14,7 +14,7 @@ namespace Comments.DAL.Data.Repositories
 
         public ICommentsRepository CommentsRepository { get; }
 
-        public IReactionsRepository ReactionsRepository { get; }
+        //public IReactionsRepository ReactionsRepository { get; }
 
         public async Task SaveChangesAsync()
         {
@@ -23,12 +23,12 @@ namespace Comments.DAL.Data.Repositories
 
         public UnitOfWork(
             CommentsContext databaseContext,
-            ICommentsRepository commentsRepository,
-            IReactionsRepository reactionsRepository)
+            ICommentsRepository commentsRepository)
+            //IReactionsRepository reactionsRepository)
         {
             this.databaseContext = databaseContext;
             CommentsRepository = commentsRepository;
-            ReactionsRepository = reactionsRepository;
+            //ReactionsRepository = reactionsRepository;
         }
     }
 }

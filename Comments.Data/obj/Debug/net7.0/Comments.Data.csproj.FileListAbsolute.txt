@@ -1,0 +1,12 @@
+D:\Table\Projects\websites\CrylatoProject\Comments.Data\bin\Debug\net7.0\Comments.Data.deps.json
+D:\Table\Projects\websites\CrylatoProject\Comments.Data\bin\Debug\net7.0\Comments.Data.dll
+D:\Table\Projects\websites\CrylatoProject\Comments.Data\bin\Debug\net7.0\Comments.Data.pdb
+D:\Table\Projects\websites\CrylatoProject\Comments.Data\obj\Debug\net7.0\Comments.Data.csproj.AssemblyReference.cache
+D:\Table\Projects\websites\CrylatoProject\Comments.Data\obj\Debug\net7.0\Comments.Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\Table\Projects\websites\CrylatoProject\Comments.Data\obj\Debug\net7.0\Comments.Data.AssemblyInfoInputs.cache
+D:\Table\Projects\websites\CrylatoProject\Comments.Data\obj\Debug\net7.0\Comments.Data.AssemblyInfo.cs
+D:\Table\Projects\websites\CrylatoProject\Comments.Data\obj\Debug\net7.0\Comments.Data.csproj.CoreCompileInputs.cache
+D:\Table\Projects\websites\CrylatoProject\Comments.Data\obj\Debug\net7.0\Comments.Data.dll
+D:\Table\Projects\websites\CrylatoProject\Comments.Data\obj\Debug\net7.0\refint\Comments.Data.dll
+D:\Table\Projects\websites\CrylatoProject\Comments.Data\obj\Debug\net7.0\Comments.Data.pdb
+D:\Table\Projects\websites\CrylatoProject\Comments.Data\obj\Debug\net7.0\ref\Comments.Data.dll

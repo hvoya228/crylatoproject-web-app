@@ -1,5 +1,4 @@
-﻿using Comments.DAL.Entities;
-using Comments.DAL.Seeding;
+﻿using Comments.Data.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
@@ -14,15 +13,13 @@ namespace Comments.DAL.Configuration
     {
         public void Configure(EntityTypeBuilder<Comment> builder)
         {
-            builder.Property(comment => comment.Id)
-                   .UseIdentityColumn()
-                   .IsRequired();
+            builder.Property(c => c.Theme)
+                .HasMaxLength(100)
+                .IsRequired(false);
 
-            builder.Property(comment => comment.Text)
-                   .HasMaxLength(100)
-                   .IsRequired();
-
-            new CommentSeeder().Seed(builder);
+            builder.Property(c => c.Text)
+                   .HasMaxLength(500)
+                   .IsRequired(true);
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿using Comments.DAL.Entities;
+﻿using Comments.Data.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
