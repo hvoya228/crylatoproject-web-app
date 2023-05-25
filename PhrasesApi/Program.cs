@@ -22,11 +22,14 @@ builder.Services.AddScoped<IDbTransaction>(s =>
 });
 
 //Dependency injection
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddScoped<IPhraseRepository, PhraseRepository>();
 builder.Services.AddScoped<ITagRepository, TagRepository>();
 builder.Services.AddScoped<IRegionRepository, RegionRepository>();
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<IPhraseService, PhraseService>();
+builder.Services.AddScoped<ITagService, TagService>();
+builder.Services.AddScoped<IRegionService, RegionService>();
 
 var app = builder.Build();
 

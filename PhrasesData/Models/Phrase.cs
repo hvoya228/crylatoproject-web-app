@@ -2,10 +2,10 @@
 {
     public class Phrase : BaseModel
     {
-        public string Name { get; set; } = null!;
-        public string Description { get; set; } = null!;
-        public int Likes { get; set; }
-        public Guid TagId { get; set; }
-        public Guid RegionId { get; set; }
+        public string PhraseName { get; set; } = null!;
+        public string PhraseDescription { get; set; } = null!;
+        public int PhraseLikes { get; set; }
+        public Guid PhraseTagId { get; set; }
+        public Guid PhraseRegionId { get; set; }
     }
 }

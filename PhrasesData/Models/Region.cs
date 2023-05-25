@@ -2,6 +2,6 @@
 {
     public class Region : BaseModel
     {
-        public string Name { get; set; } = null!;
+        public string RegionName { get; set; } = null!;
     }
 }

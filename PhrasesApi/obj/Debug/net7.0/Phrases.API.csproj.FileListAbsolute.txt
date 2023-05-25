@@ -71,3 +71,5 @@ D:\Table\Projects\websites\CrylatoProject\PhrasesApi\obj\Debug\net7.0\refint\Phr
 D:\Table\Projects\websites\CrylatoProject\PhrasesApi\obj\Debug\net7.0\Phrases.API.pdb
 D:\Table\Projects\websites\CrylatoProject\PhrasesApi\obj\Debug\net7.0\Phrases.API.genruntimeconfig.cache
 D:\Table\Projects\websites\CrylatoProject\PhrasesApi\obj\Debug\net7.0\ref\Phrases.API.dll
+D:\Table\Projects\websites\CrylatoProject\PhrasesApi\bin\Debug\net7.0\AutoMapper.dll
+D:\Table\Projects\websites\CrylatoProject\PhrasesApi\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

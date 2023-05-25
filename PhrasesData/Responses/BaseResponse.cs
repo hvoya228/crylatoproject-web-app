@@ -1,4 +1,5 @@
-﻿using Phrases.Data.Enums;
+﻿using Phrases.Data.Dtos;
+using Phrases.Data.Enums;
 using Phrases.Data.Interfaces;
 using System;
 using System.Collections.Generic;

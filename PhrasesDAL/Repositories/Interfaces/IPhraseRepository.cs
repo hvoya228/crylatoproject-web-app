@@ -4,8 +4,10 @@ namespace Phrases.DAL.Repositories.Intefaces
 {
     public interface IPhraseRepository : IGenericRepository<Phrase>
     {
-        Task<IEnumerable<Phrase>> GetAllByTagIdOrderByIdAsync(Guid tagId);
-        Task<IEnumerable<Phrase>> GetAllByTagIdOrderByLikesAsync(Guid tagId);
-        Task UpdateLikesAsync(Guid id, int likes);
+        Task<List<CompletePhrase>> GetAllComplete();
+        Task<List<CompletePhrase>> GetAllCompleteOrderedByLikes();
+        Task<List<CompletePhrase>> GetAllCompleteByTagId(Guid tagId);
+        Task<List<CompletePhrase>> GetAllCompleteByRegionId(Guid regionId);
+        Task UpdateLikesById(Guid id, int likes);
     }
 }
