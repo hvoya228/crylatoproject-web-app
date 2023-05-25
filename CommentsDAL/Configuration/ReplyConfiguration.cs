@@ -13,9 +13,16 @@ namespace Comments.DAL.Configuration
     {
         public void Configure(EntityTypeBuilder<Reply> builder)
         {
+            builder.Property(r => r.ID)
+                .HasDefaultValueSql("NEWID()"); ;
+
             builder.Property(r => r.ReplyText)
                 .HasMaxLength(500)
-                .IsRequired();
+                .IsRequired(true);
+
+            builder.Property(f => f.ReplyPostDate)
+                .IsRequired(true)
+                .HasDefaultValue(DateTime.Now);
 
             builder.HasOne(r => r.Comment)
                 .WithMany(c => c.Replies)

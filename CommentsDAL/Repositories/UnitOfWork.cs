@@ -10,10 +10,9 @@ namespace Comments.DAL.Repositories
     public class UnitOfWork : IUnitOfWork
     {
         protected readonly CommentsContext databaseContext;
-
         public ICommentRepository CommentRepository { get; }
-
-        //public IReactionsRepository ReactionsRepository { get; }
+        public IReplyRepository ReplyRepository { get; }
+        public IFeedbackRepository FeedbackRepository { get; }
 
         public async Task SaveChangesAsync()
         {
@@ -22,12 +21,14 @@ namespace Comments.DAL.Repositories
 
         public UnitOfWork(
         CommentsContext databaseContext,
-        ICommentRepository commentRepository)
-        //IReactionsRepository reactionsRepository)
+        ICommentRepository commentRepository,
+        IReplyRepository replyRepository,
+        IFeedbackRepository feedbackRepository)
         {
             this.databaseContext = databaseContext;
             CommentRepository = commentRepository;
-            //ReactionsRepository = reactionsRepository;
+            ReplyRepository = replyRepository;
+            FeedbackRepository = feedbackRepository;
         }
     }
 }

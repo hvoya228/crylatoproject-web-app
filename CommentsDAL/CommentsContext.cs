@@ -15,6 +15,7 @@ namespace Comments.DAL
 
         public DbSet<Comment> Comments { get; set; }
         public DbSet<Reply> Replies { get; set; }
+        public DbSet<Feedback> Feedbacks { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

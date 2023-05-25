@@ -1,0 +1,17 @@
+D:\Table\Projects\websites\CrylatoProject\Comments.BLL\bin\Debug\net7.0\Comments.BLL.deps.json
+D:\Table\Projects\websites\CrylatoProject\Comments.BLL\bin\Debug\net7.0\Comments.BLL.dll
+D:\Table\Projects\websites\CrylatoProject\Comments.BLL\bin\Debug\net7.0\Comments.BLL.pdb
+D:\Table\Projects\websites\CrylatoProject\Comments.BLL\bin\Debug\net7.0\Comments.DAL.dll
+D:\Table\Projects\websites\CrylatoProject\Comments.BLL\bin\Debug\net7.0\Comments.Data.dll
+D:\Table\Projects\websites\CrylatoProject\Comments.BLL\bin\Debug\net7.0\Comments.Data.pdb
+D:\Table\Projects\websites\CrylatoProject\Comments.BLL\bin\Debug\net7.0\Comments.DAL.pdb
+D:\Table\Projects\websites\CrylatoProject\Comments.BLL\obj\Debug\net7.0\Comments.BLL.csproj.AssemblyReference.cache
+D:\Table\Projects\websites\CrylatoProject\Comments.BLL\obj\Debug\net7.0\Comments.BLL.GeneratedMSBuildEditorConfig.editorconfig
+D:\Table\Projects\websites\CrylatoProject\Comments.BLL\obj\Debug\net7.0\Comments.BLL.AssemblyInfoInputs.cache
+D:\Table\Projects\websites\CrylatoProject\Comments.BLL\obj\Debug\net7.0\Comments.BLL.AssemblyInfo.cs
+D:\Table\Projects\websites\CrylatoProject\Comments.BLL\obj\Debug\net7.0\Comments.BLL.csproj.CoreCompileInputs.cache
+D:\Table\Projects\websites\CrylatoProject\Comments.BLL\obj\Debug\net7.0\Comments.BLL.csproj.CopyComplete
+D:\Table\Projects\websites\CrylatoProject\Comments.BLL\obj\Debug\net7.0\Comments.BLL.dll
+D:\Table\Projects\websites\CrylatoProject\Comments.BLL\obj\Debug\net7.0\refint\Comments.BLL.dll
+D:\Table\Projects\websites\CrylatoProject\Comments.BLL\obj\Debug\net7.0\Comments.BLL.pdb
+D:\Table\Projects\websites\CrylatoProject\Comments.BLL\obj\Debug\net7.0\ref\Comments.BLL.dll

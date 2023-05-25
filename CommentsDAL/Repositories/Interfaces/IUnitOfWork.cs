@@ -9,6 +9,8 @@ namespace Comments.DAL.Repositories.Interfaces
     public interface IUnitOfWork
     {
         ICommentRepository CommentRepository { get; }
+        IReplyRepository ReplyRepository { get; }
+        IFeedbackRepository FeedbackRepository { get; }
 
         Task SaveChangesAsync();
     }

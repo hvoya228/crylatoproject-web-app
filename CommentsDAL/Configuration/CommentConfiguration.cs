@@ -13,6 +13,9 @@ namespace Comments.DAL.Configuration
     {
         public void Configure(EntityTypeBuilder<Comment> builder)
         {
+            builder.Property(c => c.ID)
+                .HasDefaultValueSql("NEWID()");
+
             builder.Property(c => c.CommentTheme)
                 .HasMaxLength(100)
                 .IsRequired(false);
@@ -20,6 +23,10 @@ namespace Comments.DAL.Configuration
             builder.Property(c => c.CommentText)
                    .HasMaxLength(500)
                    .IsRequired(true);
+
+            builder.Property(c => c.CommentPostDate)
+                .IsRequired(true)
+                .HasDefaultValue(DateTime.Now);
 
             builder.HasOne(c => c.Feedback)
                 .WithMany(f => f.Comments)

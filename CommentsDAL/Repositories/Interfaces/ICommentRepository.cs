@@ -9,5 +9,6 @@ namespace Comments.DAL.Repositories.Interfaces
 {
     public interface ICommentRepository : IGenericRepository<Comment>
     {
+        Task<List<CompleteComment>> GetAllComplete();
     }
 }

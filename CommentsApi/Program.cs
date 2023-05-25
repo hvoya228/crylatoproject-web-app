@@ -1,3 +1,5 @@
+using Comments.BLL.Repositories;
+using Comments.BLL.Repositories.Interfaces;
 using Comments.DAL;
 using Comments.DAL.Repositories;
 using Comments.DAL.Repositories.Interfaces;
@@ -17,9 +19,15 @@ builder.Services.AddDbContext<CommentsContext>(configurations =>
         options => options.MigrationsAssembly("Comments.Migrations"));
 });
 
+//Dependency injection
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddScoped<ICommentRepository, CommentRepository>();
+builder.Services.AddScoped<IReplyRepository, ReplyRepository>();
+builder.Services.AddScoped<IFeedbackRepository, FeedbackRepository>();
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
-
+builder.Services.AddScoped<ICommentService, CommentService>();
+builder.Services.AddScoped<IFeedbackService, FeedbackService>();
+builder.Services.AddScoped<IReplyService, ReplyService>();
 
 var app = builder.Build();
 

@@ -16,7 +16,7 @@ namespace Comments.DAL.Repositories
 
         public virtual async Task<IEnumerable<TEntity>> GetAsync() => await table.ToListAsync();
 
-        public virtual async Task<TEntity> GetByIdAsync(int id)
+        public virtual async Task<TEntity> GetByIdAsync(Guid id)
         {
             return await table.FindAsync(id);
         }
@@ -26,13 +26,13 @@ namespace Comments.DAL.Repositories
         public virtual async Task UpdateAsync(TEntity entity) =>
             await Task.Run(() => table.Update(entity));
 
-        public virtual async Task DeleteAsync(int id)
+        public virtual async Task DeleteAsync(Guid id)
         {
             var entity = await GetByIdAsync(id);
             await Task.Run(() => table.Remove(entity));
         }
 
-        protected static string GetEntityNotFoundErrorMessage(int id) =>
+        protected static string GetEntityNotFoundErrorMessage(Guid id) =>
             $"{typeof(TEntity).Name} with id {id} not found.";
 
         public GenericRepository(CommentsContext databaseContext)

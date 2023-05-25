@@ -22,6 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Comments.BLL\Comments.BLL.csproj" />
     <ProjectReference Include="..\Comments.Migrations\Comments.Migrations.csproj" />
     <ProjectReference Include="..\CommentsDAL\Comments.DAL.csproj" />
   </ItemGroup>

@@ -13,7 +13,7 @@ namespace Phrases.Data.Responses
     public class BaseResponse<T> : IBaseResponse<T>
     {
         /// <summary>
-        /// Errors and warnings describing property
+        /// Errors, warnings, success describing property
         /// </summary>
         public string Description { get; set; } = null!;
 

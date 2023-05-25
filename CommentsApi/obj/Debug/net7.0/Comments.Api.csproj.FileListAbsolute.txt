@@ -89,3 +89,7 @@ D:\Table\Projects\websites\CrylatoProject\CommentsApi\bin\Debug\net7.0\runtimes\
 D:\Table\Projects\websites\CrylatoProject\CommentsApi\bin\Debug\net7.0\runtimes\win-x86\native\sni.dll
 D:\Table\Projects\websites\CrylatoProject\CommentsApi\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 D:\Table\Projects\websites\CrylatoProject\CommentsApi\bin\Debug\net7.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Table\Projects\websites\CrylatoProject\CommentsApi\bin\Debug\net7.0\AutoMapper.dll
+D:\Table\Projects\websites\CrylatoProject\CommentsApi\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\Table\Projects\websites\CrylatoProject\CommentsApi\bin\Debug\net7.0\Comments.BLL.dll
+D:\Table\Projects\websites\CrylatoProject\CommentsApi\bin\Debug\net7.0\Comments.BLL.pdb

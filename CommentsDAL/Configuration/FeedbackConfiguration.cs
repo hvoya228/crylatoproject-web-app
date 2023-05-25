@@ -13,6 +13,9 @@ namespace Comments.DAL.Configuration
     {
         public void Configure(EntityTypeBuilder<Feedback> builder)
         {
+            builder.Property(f => f.ID)
+                .HasDefaultValueSql("NEWID()");
+
             builder.Property(f => f.FeedbackTheme)
                 .IsRequired(true)
                 .HasConversion<string>();
