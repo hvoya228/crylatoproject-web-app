@@ -1,6 +1,6 @@
 ﻿using Comments.Data.Models;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,17 +9,17 @@ using System.Threading.Tasks;
 
 namespace Comments.DAL.Configuration
 {
-    public class ReactionConfiguration : IEntityTypeConfiguration<Reply>
+    public class ReplyConfiguration : IEntityTypeConfiguration<Reply>
     {
         public void Configure(EntityTypeBuilder<Reply> builder)
         {
-            builder.Property(r => r.Text)
+            builder.Property(r => r.ReplyText)
                 .HasMaxLength(500)
                 .IsRequired();
 
             builder.HasOne(r => r.Comment)
                 .WithMany(c => c.Replies)
-                .HasForeignKey(r => r.CommentId);
+                .HasForeignKey(r => r.ReplyCommentId);
         }
     }
 }

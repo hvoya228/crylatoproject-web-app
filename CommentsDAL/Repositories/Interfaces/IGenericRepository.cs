@@ -4,20 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Comments.DAL.Interfaces.Repositories
+namespace Comments.DAL.Repositories.Interfaces
 {
-    public interface IRepository<TEntity> where TEntity : class
+    public interface IGenericRepository<TEntity> where TEntity : class
     {
         Task<IEnumerable<TEntity>> GetAsync();
-
         Task<TEntity> GetByIdAsync(int id);
-
-        Task<TEntity> GetCompleteEntityAsync(int id);
-
         Task InsertAsync(TEntity entity);
-
         Task UpdateAsync(TEntity entity);
-
         Task DeleteAsync(int id);
     }
 }

@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Comments.DAL.Interfaces.Repositories
+namespace Comments.DAL.Repositories.Interfaces
 {
-    public interface ICommentsRepository : IRepository<Comment>
+    public interface ICommentRepository : IGenericRepository<Comment>
     {
     }
 }

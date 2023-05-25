@@ -1,8 +1,6 @@
 using Comments.DAL;
-using Comments.DAL.Data;
-using Comments.DAL.Data.Repositories;
-using Comments.DAL.Interfaces;
-using Comments.DAL.Interfaces.Repositories;
+using Comments.DAL.Repositories;
+using Comments.DAL.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -19,9 +17,8 @@ builder.Services.AddDbContext<CommentsContext>(configurations =>
         options => options.MigrationsAssembly("Comments.Migrations"));
 });
 
-//builder.Services.AddScoped<ICommentsRepository, CommentsRepository>();
-//builder.Services.AddScoped<IReactionsRepository, ReactionsRepository>();
-//builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+builder.Services.AddScoped<ICommentRepository, CommentRepository>();
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 
 var app = builder.Build();

@@ -8,11 +8,13 @@ using System.Threading.Tasks;
 namespace Comments.Data.Models
 {
     [Table("Comments", Schema = "Comments")]
-    public class Comment : BaseCommentModel
+    public class Comment : BaseModel
     {
-        public string Theme { get; set; } = null!;
+        public string CommentTheme { get; set; } = null!;
+        public string CommentText { get; set; } = null!;
+        public DateTime CommentPostDate { get; set; }
         public ICollection<Reply> Replies { get; set; } = null!;
-        public Guid FeedbackId { get; set; }
+        public Guid CommentFeedbackId { get; set; }
         public Feedback Feedback { get; set; } = null!;
     }
 }

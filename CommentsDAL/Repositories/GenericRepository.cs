@@ -1,4 +1,4 @@
-﻿using Comments.DAL.Interfaces.Repositories;
+﻿using Comments.DAL.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -6,9 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Comments.DAL.Data.Repositories
+namespace Comments.DAL.Repositories
 {
-    public abstract class GenericRepository<TEntity> : IRepository<TEntity> where TEntity : class
+    public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEntity : class
     {
         protected readonly CommentsContext databaseContext;
 
@@ -20,8 +20,6 @@ namespace Comments.DAL.Data.Repositories
         {
             return await table.FindAsync(id);
         }
-
-        public abstract Task<TEntity> GetCompleteEntityAsync(int id);
 
         public virtual async Task InsertAsync(TEntity entity) => await table.AddAsync(entity);
 

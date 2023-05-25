@@ -12,7 +12,6 @@ namespace Comments.Data.Models
     public class Feedback : BaseModel
     {
         public FeedbackTheme FeedbackTheme { get; set; }
-        public Guid CommentId { get; set; }
-        public Comment Comment { get; set; } = null!;
+        public ICollection<Comment> Comments { get; set; } = null!;
     }
 }

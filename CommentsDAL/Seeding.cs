@@ -18,30 +18,52 @@ namespace Comments.DAL
         public static void SeedingInit()
         {
             Comments = new Faker<Comment>()
-                .RuleFor(x => x.Theme, f => f.Lorem.Word())
-                .RuleFor(x => x.Text, f => f.Lorem.Text())
-                .RuleFor(x => x.PostDate, f => f.Date.Past())
+                .RuleFor(x => x.CommentTheme, f => f.Lorem.Word())
+                .RuleFor(x => x.CommentText, f => f.Lorem.Text())
+                .RuleFor(x => x.CommentPostDate, f => f.Date.Past())
                 .Generate(30);
 
             Replies = new Faker<Reply>()
-            .RuleFor(x => x.Text, f => f.Lorem.Text())
-            .RuleFor(x => x.PostDate, f => f.Date.Past())
+            .RuleFor(x => x.ReplyText, f => f.Lorem.Text())
+            .RuleFor(x => x.ReplyPostDate, f => f.Date.Past())
             .Generate(30);
 
-            Feedbacks = new Faker<Feedback>()
-                .RuleFor(x => x.FeedbackTheme, f => f.PickRandom<FeedbackTheme>())
-                .Generate(30);
+            Feedbacks = new List<Feedback>()
+            {
+                new Feedback
+                {
+                   FeedbackTheme = FeedbackTheme.Comment
+                },
+
+                new Feedback
+                {
+                    FeedbackTheme = FeedbackTheme.LoveIt
+                },
+
+                new Feedback
+                {
+                    FeedbackTheme = FeedbackTheme.Issue
+                },
+
+                new Feedback
+                {
+                    FeedbackTheme = FeedbackTheme.Suggestion
+                }
+            };
 
             var commentIds = Comments.Select(x => x.ID).ToList();
+            var feedbackIds = Feedbacks.Select(x => x.ID).ToList();
+            var random = new Random();
 
             for(var i = 0; i < Replies.Count; i++)
             {
-                Replies[i].CommentId = commentIds[i];
+                Replies[i].ReplyCommentId = commentIds[i];
             }
 
-            for(var i = 0; i < Feedbacks.Count; i++)
+            for(var i = 0; i < Comments.Count; i++)
             {
-                Feedbacks[i].CommentId = commentIds[i];
+                int randomIndex = random.Next(0, feedbackIds.Count);
+                Comments[i].CommentFeedbackId = feedbackIds[randomIndex];
             }
         }
     }

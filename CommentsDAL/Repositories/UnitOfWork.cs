@@ -1,18 +1,17 @@
-﻿using Comments.DAL.Interfaces;
-using Comments.DAL.Interfaces.Repositories;
+﻿using Comments.DAL.Repositories.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Comments.DAL.Data.Repositories
+namespace Comments.DAL.Repositories
 {
     public class UnitOfWork : IUnitOfWork
     {
         protected readonly CommentsContext databaseContext;
 
-        public ICommentsRepository CommentsRepository { get; }
+        public ICommentRepository CommentRepository { get; }
 
         //public IReactionsRepository ReactionsRepository { get; }
 
@@ -22,12 +21,12 @@ namespace Comments.DAL.Data.Repositories
         }
 
         public UnitOfWork(
-            CommentsContext databaseContext,
-            ICommentsRepository commentsRepository)
-            //IReactionsRepository reactionsRepository)
+        CommentsContext databaseContext,
+        ICommentRepository commentRepository)
+        //IReactionsRepository reactionsRepository)
         {
             this.databaseContext = databaseContext;
-            CommentsRepository = commentsRepository;
+            CommentRepository = commentRepository;
             //ReactionsRepository = reactionsRepository;
         }
     }

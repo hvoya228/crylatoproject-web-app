@@ -16,10 +16,6 @@ namespace Comments.DAL.Configuration
             builder.Property(f => f.FeedbackTheme)
                 .IsRequired(true)
                 .HasConversion<string>();
-
-            builder.HasOne(f => f.Comment)
-                .WithOne(c => c.Feedback)
-                .HasForeignKey<Feedback>(f => f.CommentId);
         }
     }
 }
