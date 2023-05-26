@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "bFQCqvf+V2V7NfYKlA20oRjbGwad98QZKxz7CfT1rTg5o4omxrulJ8AbD7R4bljMIgkumTGEXdyc6gIA3VtQRA==",
+  "dgSpecHash": "s3Imvx59+/yY5nKXG5exPndy/i9DWr+leOKhFpPAzMLIzrUjb9yeh4hDgKhlHB7sWPBnnDg3MYep8lZuA24uHw==",
   "success": true,
   "projectFilePath": "D:\\Table\\Projects\\websites\\CrylatoProject\\Comments.Migrations\\Comments.Migrations.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "C:\\Users\\Oleh\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
     "C:\\Users\\Oleh\\.nuget\\packages\\bogus\\34.0.2\\bogus.34.0.2.nupkg.sha512",
     "C:\\Users\\Oleh\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
+    "C:\\Users\\Oleh\\.nuget\\packages\\fluentvalidation\\11.5.2\\fluentvalidation.11.5.2.nupkg.sha512",
     "C:\\Users\\Oleh\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Oleh\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Oleh\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

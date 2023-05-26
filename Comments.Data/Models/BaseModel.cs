@@ -10,8 +10,6 @@ namespace Comments.Data.Models
 {
     public abstract class BaseModel
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        [Key]
         public Guid ID { get; set; }
 
         public BaseModel() { ID = Guid.NewGuid(); }

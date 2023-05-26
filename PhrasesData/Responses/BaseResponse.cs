@@ -23,6 +23,11 @@ namespace Phrases.Data.Responses
         public StatusCode StatusCode { get; set; }
 
         /// <summary>
+        /// Returns count of objects from get query
+        /// </summary>
+        public int ResultsCount { get; set; }
+
+        /// <summary>
         /// Received data from DAL
         /// </summary>
         public T Data { get; set; }

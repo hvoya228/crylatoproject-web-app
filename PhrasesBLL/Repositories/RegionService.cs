@@ -53,6 +53,8 @@ namespace Phrases.BLL.Repositories
                     return baseResponse;
                 }
 
+                baseResponse.ResultsCount = regionDtoList.Count;
+                baseResponse.Description = "Success!";
                 baseResponse.Data = regionDtoList;
                 baseResponse.StatusCode = StatusCode.OK;
 

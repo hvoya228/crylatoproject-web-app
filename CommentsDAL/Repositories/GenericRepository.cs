@@ -14,6 +14,10 @@ namespace Comments.DAL.Repositories
 
         protected readonly DbSet<TEntity> table;
 
+        /// <summary>
+        /// Execute get query, returns all founded objects
+        /// </summary>
+        /// <returns>IEnumerable<TEntity></returns>
         public virtual async Task<IEnumerable<TEntity>> GetAsync() => await table.ToListAsync();
 
         public virtual async Task<TEntity> GetByIdAsync(Guid id)
@@ -21,19 +25,31 @@ namespace Comments.DAL.Repositories
             return await table.FindAsync(id);
         }
 
+        /// <summary>
+        /// Execute Insert query to add model in table
+        /// </summary>
+        /// <param name="entity">Specific model</param>
+        /// <returns>Nothing</returns>
         public virtual async Task InsertAsync(TEntity entity) => await table.AddAsync(entity);
 
+        /// <summary>
+        /// Execute update query to update model in table
+        /// </summary>
+        /// <param name="entity">Specific model</param>
+        /// <returns>Nothing</returns>
         public virtual async Task UpdateAsync(TEntity entity) =>
             await Task.Run(() => table.Update(entity));
 
+        /// <summary>
+        /// Execute delete query to delete model in table
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>Nothing</returns>
         public virtual async Task DeleteAsync(Guid id)
         {
             var entity = await GetByIdAsync(id);
             await Task.Run(() => table.Remove(entity));
         }
-
-        protected static string GetEntityNotFoundErrorMessage(Guid id) =>
-            $"{typeof(TEntity).Name} with id {id} not found.";
 
         public GenericRepository(CommentsContext databaseContext)
         {

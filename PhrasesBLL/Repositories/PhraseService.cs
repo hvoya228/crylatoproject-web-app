@@ -55,6 +55,8 @@ namespace Phrases.BLL.Repositories
                     return baseResponse;
                 }
 
+                baseResponse.ResultsCount = completePhraseDtoList.Count;
+                baseResponse.Description = "Success!";
                 baseResponse.Data = completePhraseDtoList;
                 baseResponse.StatusCode = StatusCode.OK;
                 return baseResponse;
@@ -97,6 +99,8 @@ namespace Phrases.BLL.Repositories
                     return baseResponse;
                 }
 
+                baseResponse.ResultsCount = completePhraseDtoList.Count;
+                baseResponse.Description = "Success!";
                 baseResponse.Data = completePhraseDtoList;
                 baseResponse.StatusCode = StatusCode.OK;
                 return baseResponse;
@@ -139,6 +143,8 @@ namespace Phrases.BLL.Repositories
                     return baseResponse;
                 }
 
+                baseResponse.ResultsCount = completePhraseDtoList.Count;
+                baseResponse.Description = "Success!";
                 baseResponse.Data = completePhraseDtoList;
                 baseResponse.StatusCode = StatusCode.OK;
                 return baseResponse;
@@ -181,6 +187,8 @@ namespace Phrases.BLL.Repositories
                     return baseResponse;
                 }
 
+                baseResponse.ResultsCount = completePhraseDtoList.Count;
+                baseResponse.Description = "Success!";
                 baseResponse.Data = completePhraseDtoList;
                 baseResponse.StatusCode = StatusCode.OK;
                 return baseResponse;
@@ -223,6 +231,8 @@ namespace Phrases.BLL.Repositories
                     return baseResponse;
                 }
 
+                baseResponse.ResultsCount = phraseDtoList.Count;
+                baseResponse.Description = "Success!";
                 baseResponse.Data = phraseDtoList;
                 baseResponse.StatusCode = StatusCode.OK;
 

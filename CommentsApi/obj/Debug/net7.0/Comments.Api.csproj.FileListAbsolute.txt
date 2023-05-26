@@ -93,3 +93,4 @@ D:\Table\Projects\websites\CrylatoProject\CommentsApi\bin\Debug\net7.0\AutoMappe
 D:\Table\Projects\websites\CrylatoProject\CommentsApi\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 D:\Table\Projects\websites\CrylatoProject\CommentsApi\bin\Debug\net7.0\Comments.BLL.dll
 D:\Table\Projects\websites\CrylatoProject\CommentsApi\bin\Debug\net7.0\Comments.BLL.pdb
+D:\Table\Projects\websites\CrylatoProject\CommentsApi\bin\Debug\net7.0\FluentValidation.dll

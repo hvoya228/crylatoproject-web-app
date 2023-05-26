@@ -24,7 +24,10 @@ namespace Phrases.DAL.Repositories
             _tableName = tableName;
         }
 
-
+        /// <summary>
+        /// Returns all objects from specific table - T
+        /// </summary>
+        /// <returns>List<T></returns>
         public async Task<List<T>> GetAllAsync()
         {
             var result = await _sqlConnection.QueryAsync<T>($"SELECT * FROM {_tableName}", transaction: _dbTransaction);
@@ -32,6 +35,12 @@ namespace Phrases.DAL.Repositories
             return result.ToList();
         }
 
+        /// <summary>
+        /// Returns specific object from specific table - T
+        /// </summary>
+        /// <param name="id">Object id</param>
+        /// <returns>Nothing</returns>
+        /// <exception cref="KeyNotFoundException">Id not found exception</exception>
         public async Task<T> GetAsync(Guid id)
         {
             var result = await _sqlConnection.QuerySingleOrDefaultAsync<T>($"SELECT * FROM {_tableName} WHERE ID=@Id",
@@ -43,6 +52,11 @@ namespace Phrases.DAL.Repositories
             return result;
         }
 
+        /// <summary>
+        /// Delete specific object from database
+        /// </summary>
+        /// <param name="id">Object id</param>
+        /// <returns>Nothing</returns>
         public async Task DeleteAsync(Guid id)
         {
             await _sqlConnection.ExecuteAsync($"DELETE FROM {_tableName} WHERE ID=@Id",
@@ -50,6 +64,11 @@ namespace Phrases.DAL.Repositories
                 transaction: _dbTransaction);
         }
 
+        /// <summary>
+        /// Adds specific object - T to specific table - T
+        /// </summary>
+        /// <param name="t">Model</param>
+        /// <returns>Guid newID</returns>
         public async Task<Guid> AddAsync(T t)
         {
             var insertQuery = GenerateInsertQuery();
@@ -71,7 +90,11 @@ namespace Phrases.DAL.Repositories
             return inserted;
         }
 
-
+        /// <summary>
+        /// Updates specific object - T in specific table - T
+        /// </summary>
+        /// <param name="t">Model</param>
+        /// <returns>Nothing</returns>
         public async Task ReplaceAsync(T t)
         {
             var updateQuery = GenerateUpdateQuery();

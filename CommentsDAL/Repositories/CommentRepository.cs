@@ -15,6 +15,10 @@ namespace Comments.DAL.Repositories
     {
         public CommentRepository(CommentsContext databaseContext) : base(databaseContext) {}
 
+        /// <summary>
+        /// Execute get query with inner join to feedback, returns all founded objects
+        /// </summary>
+        /// <returns>List<CompleteComment></returns>
         public async Task<List<CompleteComment>> GetAllComplete()
         {
             var result = new List<CompleteComment>();

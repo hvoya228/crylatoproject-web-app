@@ -53,6 +53,8 @@ namespace Comments.BLL.Repositories
                     return baseResponse;
                 }
 
+                baseResponse.ResultsCount = completeCommentDtoList.Count;
+                baseResponse.Description = "Success!";
                 baseResponse.Data = completeCommentDtoList;
                 baseResponse.StatusCode = StatusCode.OK;
 
@@ -96,6 +98,8 @@ namespace Comments.BLL.Repositories
                     return baseResponse;
                 }
 
+                baseResponse.ResultsCount = commentDtoList.Count;
+                baseResponse.Description = "Success!";
                 baseResponse.Data = commentDtoList;
                 baseResponse.StatusCode = StatusCode.OK;
 
@@ -167,6 +171,8 @@ namespace Comments.BLL.Repositories
             {
                 if (commentDto is not null)
                 {
+                    commentDto.ID = Guid.NewGuid();
+
                     var config = new MapperConfiguration(cfg =>
                     {
                         cfg.AddProfile<CommentDtoProfile>();

@@ -14,6 +14,10 @@ namespace Comments.DAL.Repositories
         public IReplyRepository ReplyRepository { get; }
         public IFeedbackRepository FeedbackRepository { get; }
 
+        /// <summary>
+        /// Saves already implemneted changes in database
+        /// </summary>
+        /// <returns>Nothing</returns>
         public async Task SaveChangesAsync()
         {
             await databaseContext.SaveChangesAsync();

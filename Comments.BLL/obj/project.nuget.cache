@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "43n2Gh9tPFqSK9hfNDJiLo/zTuH5ORjTxJYuwEe8sjJ1hre5SLQfZvVEXZxuNm3vkB4u+obAKzDOBpmpRv812Q==",
+  "dgSpecHash": "f+sHfMzO+UTlYQ6E/H/1yUGyczQbdPN83P0FDcJHu/WaE9tIGduzMAorK0EJKOBPH0EViUC0LvuuDKwpZvF/mw==",
   "success": true,
   "projectFilePath": "D:\\Table\\Projects\\websites\\CrylatoProject\\Comments.BLL\\Comments.BLL.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,7 @@
     "C:\\Users\\Oleh\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Oleh\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
     "C:\\Users\\Oleh\\.nuget\\packages\\bogus\\34.0.2\\bogus.34.0.2.nupkg.sha512",
+    "C:\\Users\\Oleh\\.nuget\\packages\\fluentvalidation\\11.5.2\\fluentvalidation.11.5.2.nupkg.sha512",
     "C:\\Users\\Oleh\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Oleh\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Oleh\\.nuget\\packages\\microsoft.data.sqlclient\\5.0.1\\microsoft.data.sqlclient.5.0.1.nupkg.sha512",
