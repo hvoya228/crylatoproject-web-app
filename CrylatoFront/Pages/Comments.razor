@@ -1,0 +1,245 @@
+﻿@page "/comments"
+@using CrylatoFront.Services;
+@using global::Comments.Data.Dtos;
+@using global::Comments.Data.Responses;
+@inject CommentsService commentsService;
+
+<style>
+    div.box {
+        border-radius: 10px;
+        padding: 1em;
+        color: black;
+        transition: all 235ms ease-in-out;
+    }
+
+    div.box:hover {
+        background-color: slategrey;
+        color: white;
+        transform: translate3d(0, 10px, 0);
+    }
+
+    div.box-lightbrown {
+        background-color: #eeeee4;
+    }
+
+    p.date {
+        font-size: 0.7em;
+    }
+
+    .button-55 {
+        align-self: center;
+        background-color: #fff;
+        background-image: none;
+        background-position: 0 90%;
+        background-repeat: repeat no-repeat;
+        background-size: 4px 3px;
+        border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+        border-style: solid;
+        border-width: 2px;
+        box-sizing: border-box;
+        color: #41403e;
+        cursor: pointer;
+        display: inline-block;
+        font-family: Neucha, sans-serif;
+        font-size: 1rem;
+        line-height: 23px;
+        outline: none;
+        padding: .75rem;
+        text-decoration: none;
+        transition: all 235ms ease-in-out;
+        border-bottom-left-radius: 15px 255px;
+        border-bottom-right-radius: 225px 15px;
+        border-top-left-radius: 255px 15px;
+        border-top-right-radius: 15px 225px;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+    }
+
+        .button-55:hover {
+            transform: translate3d(0, 5px, 0);
+        }
+
+        .button-55:active {
+            background-color: slategrey;
+        }
+
+    .input {
+        --input-focus: #666;
+        --font-color: #323232;
+        --font-color-sub: #666;
+        --bg-color: #fff;
+        --main-color: #323232;
+        width: 200px;
+        height: 40px;
+        border-radius: 5px;
+        border: 2px solid var(--main-color);
+        background-color: var(--bg-color);
+        box-shadow: 4px 4px var(--main-color);
+        font-size: 15px;
+        font-weight: 600;
+        color: var(--font-color);
+        padding: 5px 10px;
+        outline: none;
+    }
+
+        .input::placeholder {
+            color: var(--font-color-sub);
+            opacity: 0.8;
+        }
+
+        .input:focus {
+            border: 2px solid var(--input-focus);
+        }
+
+    .red-color {
+        color: #aa2e2e;
+    }
+</style>
+
+<select @bind="feedbackType">
+    <option value="option1">Comment</option>
+    <option value="option2">LoveIt</option>
+    <option value="option3">Suggestion</option>
+    <option value="option3">Issue</option>
+</select>
+
+<br />
+
+<input type="text" @bind="commentTheme" placeholder="Theme:" class="input" />
+
+<br />
+
+<input type="text" @bind="commentText" placeholder="Text:" class="input" />
+
+@if (string.IsNullOrEmpty(commentText))
+{
+    @if (emptyTextMessage is not " ")
+    {
+        <p>Comment text can`t be empty!</p>
+    }
+}
+
+<br />
+
+<button role="button" class="button-55" @onclick="() => PostComment()">Post</button>
+
+<hr />
+
+@if (commentsFromApi == null)
+{
+    <p><em>Loading...</em></p>
+
+    @if (errorMessage is not null)
+    {
+        <p>errorMessage</p>
+    }
+}
+else
+{
+    @foreach(var comment in commentsToDisplay)
+    {
+        <br />
+        <a href="/comments" @onclick="() => DeleteCommentById(comment.ID)"><span class="red-color">delete</span></a>
+        <div class="box box-lightbrown">
+            <p class="date">@comment.CommentPostDate.Date</p>
+            <p>@comment.FeedbackTheme</p>
+            <hr>
+            <h1>@comment.CommentTheme</h1>
+            <p>@comment.CommentText</p>
+        </div>
+        <br />
+    }
+}
+
+@code {
+    private BaseResponse<IEnumerable<CompleteCommentDto>> commentsFromApi;
+    private List<CompleteCommentDto> comments;
+    private List<CompleteCommentDto> commentsToDisplay;
+
+    private string errorMessage = String.Empty;
+    private string emptyTextMessage = " ";
+
+    string feedbackType = String.Empty;
+    string commentTheme = String.Empty;
+    string commentText = String.Empty;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await GetComments();
+    }
+
+    public async Task GetComments()
+    {
+        emptyTextMessage = " ";
+        commentsFromApi = await commentsService.GetAllComplete();
+
+        if (commentsFromApi is not null)
+        {
+            comments = commentsFromApi.Data.ToList();
+            comments = comments.OrderByDescending(c => c.CommentPostDate).ToList();
+            commentsToDisplay = comments;
+        }
+        else
+        {
+            if (commentsFromApi.Description is not null)
+            {
+                errorMessage = commentsFromApi.Description;
+            }
+        }
+    }
+
+    public async Task PostComment()
+    {
+        CommentDto commentDto = new CommentDto();
+
+        Guid feedbackThemeId = Guid.Empty;
+
+        switch (feedbackType)
+        {
+            case "Comment":
+                feedbackThemeId = Guid.Parse("A76B2A22-EABD-4BCD-A3F5-E18D27D23E1E");
+                break;
+            case "LoveIt":
+                feedbackThemeId = Guid.Parse("69D4A452-B1F6-43BD-ADCC-A395286C37FB");
+                break;
+            case "Suggestion":
+                feedbackThemeId = Guid.Parse("FDDB8AA4-82C2-4968-9547-93BF228AEE6A");
+                break;
+            case "Issue":
+                feedbackThemeId = Guid.Parse("9D9D989C-3785-4068-895D-27AB2531D12B");
+                break;
+            default:
+                feedbackThemeId = Guid.Parse("A76B2A22-EABD-4BCD-A3F5-E18D27D23E1E");
+                break;
+        }
+
+        commentDto.CommentPostDate = DateTime.UtcNow;
+        commentDto.CommentFeedbackId = feedbackThemeId;
+
+        if(commentTheme is not null)
+        {
+            commentDto.CommentTheme = commentTheme;
+        }
+        else
+        {
+            commentDto.CommentTheme = "No theme";
+        }
+
+        if(commentText is not null)
+        {
+            commentDto.CommentText = commentText;
+        }
+        else
+        {
+            emptyTextMessage = "Comment text can`t be empty!";
+        }
+
+        await commentsService.Insert(commentDto);
+    }
+
+    public async Task DeleteCommentById(Guid commentId)
+    {
+        await commentsService.DeleteCommentById(commentId);
+    }
+}

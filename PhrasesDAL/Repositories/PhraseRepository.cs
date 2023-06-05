@@ -17,7 +17,7 @@ namespace Phrases.DAL.Repositories
         /// <returns>List<CompletePhrase></returns>
         public async Task<List<CompletePhrase>> GetAllComplete()
         {
-            string query = @"SELECT *
+            string query = @"SELECT Phrase.ID, Phrase.PhraseName, Phrase.PhraseDescription, Phrase.PhraseLikes, Tag.TagName, Region.RegionName
                         FROM Phrases.Phrase
                         INNER JOIN Phrases.Tag ON Phrases.Phrase.PhraseTagId = Phrases.Tag.ID
                         INNER JOIN Phrases.Region ON Phrases.Phrase.PhraseRegionId = Phrases.Region.ID;";
@@ -32,7 +32,7 @@ namespace Phrases.DAL.Repositories
         /// <returns>List<CompletePhrase></returns>
         public async Task<List<CompletePhrase>> GetAllCompleteOrderedByLikes()
         {
-            string query = @"SELECT *
+            string query = @"SELECT Phrase.ID, Phrase.PhraseName, Phrase.PhraseDescription, Phrase.PhraseLikes, Tag.TagName, Region.RegionName
                         FROM Phrases.Phrase
                         INNER JOIN Phrases.Tag ON Phrases.Phrase.PhraseTagId = Phrases.Tag.ID
                         INNER JOIN Phrases.Region ON Phrases.Phrase.PhraseRegionId = Phrases.Region.ID
@@ -49,7 +49,7 @@ namespace Phrases.DAL.Repositories
         /// <returns>List<CompletePhrase></returns>
         public async Task<List<CompletePhrase>> GetAllCompleteByTagId(Guid tagId)
         {
-            string query = @"SELECT *
+            string query = @"SELECT Phrase.ID, Phrase.PhraseName, Phrase.PhraseDescription, Phrase.PhraseLikes, Tag.TagName, Region.RegionName
                         FROM Phrases.Phrase
                         INNER JOIN Phrases.Tag ON Phrases.Phrase.PhraseTagId = Phrases.Tag.ID
                         INNER JOIN Phrases.Region ON Phrases.Phrase.PhraseRegionId = Phrases.Region.ID
@@ -66,7 +66,7 @@ namespace Phrases.DAL.Repositories
         /// <returns></returns>
         public async Task<List<CompletePhrase>> GetAllCompleteByRegionId(Guid regionId)
         {
-            string query = @"SELECT *
+            string query = @"SELECT Phrase.ID, Phrase.PhraseName, Phrase.PhraseDescription, Phrase.PhraseLikes, Tag.TagName, Region.RegionName
                         FROM Phrases.Phrase
                         INNER JOIN Phrases.Tag ON Phrases.Phrase.PhraseTagId = Phrases.Tag.ID
                         INNER JOIN Phrases.Region ON Phrases.Phrase.PhraseRegionId = Phrases.Region.ID

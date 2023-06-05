@@ -1,0 +1,277 @@
+﻿@page "/phrases"
+@using CrylatoFront.Services;
+@using global::Phrases.Data.Dtos;
+@using global::Phrases.Data.Responses;
+@inject PhrasesService phrasesService
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+
+<style>
+    div.flex-start {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        margin-right: 1em;
+    }
+
+    div.flex-center-column {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    div.box {
+        border-radius: 10px;
+        padding: 1em;
+        color: white;
+        transition: all 235ms ease-in-out;
+    }
+
+    div.box:hover {
+        background-color: slategrey;
+        transform: translate3d(0, 10px, 0);
+    }
+
+    div.box-red {
+        background-color: #aa2e2e;
+    }
+
+    div.box-yellow {
+        background-color: #e7a53f;
+    }
+
+    div.box-green {
+        background-color: #26926b;
+    }
+
+    .green-color {
+        color: #26926b;
+    }
+
+    .yellow-color {
+        color: #e7a53f;
+    }
+
+    .red-color {
+        color: #aa2e2e;
+    }
+
+    .button-55 {
+        align-self: center;
+        background-color: #fff;
+        background-image: none;
+        background-position: 0 90%;
+        background-repeat: repeat no-repeat;
+        background-size: 4px 3px;
+        border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+        border-style: solid;
+        border-width: 2px;
+        box-sizing: border-box;
+        color: #41403e;
+        cursor: pointer;
+        display: inline-block;
+        font-family: Neucha, sans-serif;
+        font-size: 1rem;
+        line-height: 23px;
+        outline: none;
+        padding: .75rem;
+        text-decoration: none;
+        transition: all 235ms ease-in-out;
+        border-bottom-left-radius: 15px 255px;
+        border-bottom-right-radius: 225px 15px;
+        border-top-left-radius: 255px 15px;
+        border-top-right-radius: 15px 225px;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        }
+
+    .button-55:hover {
+        transform: translate3d(0, 5px, 0);
+    }
+
+    .button-55:active {
+            background-color: slategrey;
+    }
+
+    .input {
+        --input-focus: #666;
+        --font-color: #323232;
+        --font-color-sub: #666;
+        --bg-color: #fff;
+        --main-color: #323232;
+        width: 200px;
+        height: 40px;
+        border-radius: 5px;
+        border: 2px solid var(--main-color);
+        background-color: var(--bg-color);
+        box-shadow: 4px 4px var(--main-color);
+        font-size: 15px;
+        font-weight: 600;
+        color: var(--font-color);
+        padding: 5px 10px;
+        outline: none;
+    }
+
+    .input::placeholder {
+        color: var(--font-color-sub);
+        opacity: 0.8;
+    }
+
+    .input:focus {
+        border: 2px solid var(--input-focus);
+    }
+
+</style>
+
+<div class="flex-center-column">
+    <p>
+        Serach the specefic phrase or select by tag!
+    </p>
+    <input type="text" @bind="searchText" placeholder="Search" class="input" @oninput="GetPhraseByInput">
+</div>
+
+<div class="flex-start">
+    <button role="button" class="button-55" @onclick="() => GetPhrases()">#all</button>
+    <button role="button" class="button-55" @onclick="() => GetPhrasesByTag(redTag)"><span class="red-color">#swearing</span></button>
+    <button role="button" class="button-55" @onclick="() => GetPhrasesByTag(yellowTag)"><span class="yellow-color">#phraseologisms</span></button>
+    <button role="button" class="button-55" @onclick="() => GetPhrasesByTag(greenTag)"><span class="green-color">#dialectics</span></button>
+</div>
+
+<hr />
+
+@if (phrasesToDispaly == null)
+{
+    <p><em>Loading...</em></p>
+
+    @if (errorMessage is not null)
+    {
+        <p>errorMessage</p>
+    }
+}
+else
+{
+    @foreach (var phrase in phrasesToDispaly)
+    {
+        <br />
+
+        <a href="/phrases" @onclick="() => DeletePhraseById(phrase.ID)"><span class="red-color">delete</span></a>
+
+        @if (phrase.TagName == "#лайка")
+        {
+            <div class="box box-red">
+                <p><u>@phrase.PhraseName</u></p>
+                <p>@phrase.PhraseDescription</p>
+                <p>
+                    <i class="fas fa-map-marker-alt"></i>
+                    @phrase.RegionName
+                </p>
+                <div class="flex-start">
+                    <button role="button" class="button-55" @onclick="() => UpdateLikesById(phrase.ID, phrase)"><i class="fas fa-heart">@phrase.PhraseLikes</i></button>
+                    <button role="button" class="button-55" @onclick="() => GetPhrasesByTag(redTag)"><span class="red-color">#swearing</span></button>
+                </div>
+            </div>
+        }
+        else if (phrase.TagName == "#фразеологізм")
+        {
+            <div class="box box-yellow">
+                <p><u>@phrase.PhraseName</u></p>
+                <p>@phrase.PhraseDescription</p>
+                <p>
+                    <i class="fas fa-map-marker-alt"></i>
+                    @phrase.RegionName
+                </p>
+                <div class="flex-start">
+                    <button role="button" class="button-55" @onclick="() => UpdateLikesById(phrase.ID, phrase)"><i class="fas fa-heart">@phrase.PhraseLikes</i></button>
+                    <button role="button" class="button-55" @onclick="() => GetPhrasesByTag(yellowTag)"><span class="yellow-color">#phraseologisms</span></button>
+                </div>
+            </div>
+        }
+        else if (phrase.TagName == "#діалектизм")
+        {
+            <div class="box box-green">
+                <p><u>@phrase.PhraseName</u></p>
+                <p>@phrase.PhraseDescription</p>
+                <p>
+                    <i class="fas fa-map-marker-alt"></i>
+                    @phrase.RegionName
+                </p>
+                <div class="flex-start">
+                    <button role="button" class="button-55" @onclick="() => UpdateLikesById(phrase.ID, phrase)"><i class="fas fa-heart">@phrase.PhraseLikes</i></button>
+                    <button role="button" class="button-55" @onclick="() => GetPhrasesByTag(greenTag)"><span class="green-color">#dialectics</span></button>
+                </div>
+            </div>
+        }
+
+        <br />
+    }
+}
+
+@code {
+    private BaseResponse<IEnumerable<CompletePhraseDto>> phrasesFromApi;
+    private List<CompletePhraseDto> phrases;
+    private List<CompletePhraseDto> phrasesToDispaly;
+
+    private string errorMessage;
+
+    private string redTag = "#лайка";
+    private string yellowTag = "#фразеологізм";
+    private string greenTag = "#діалектизм";
+
+    private string searchText;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await GetPhrases();
+    }
+
+    public async Task GetPhrases()
+    {
+        phrasesFromApi = await phrasesService.GetAllComplete();
+
+        if (phrasesFromApi is not null)
+        {
+            phrases = phrasesFromApi.Data.ToList();
+            phrasesToDispaly = phrases;
+        }
+        else
+        {
+            if(phrasesFromApi.Description is not null)
+            {
+                errorMessage = phrasesFromApi.Description;
+            }
+        }
+    }
+
+    public void GetPhrasesByTag(string tagName)
+    {
+        try
+        {
+            phrasesToDispaly = phrases.Where(phrase => phrase.TagName == tagName).ToList();
+        }
+        catch
+        {
+            errorMessage = "No phrases with this tag!";
+        }
+    }
+
+    public void GetPhraseByInput(ChangeEventArgs e)
+    {
+        if (e.Value != null)
+        {
+            searchText = e.Value.ToString();
+            phrasesToDispaly = phrases.Where(phrase => phrase.PhraseName.Contains(searchText, StringComparison.OrdinalIgnoreCase)).ToList();
+        }
+    }
+
+    public async Task DeletePhraseById(Guid phraseId)
+    {
+        await phrasesService.DeletePhraseById(phraseId);
+    }
+
+    public async Task UpdateLikesById(Guid phraseId, CompletePhraseDto completePhraseDto)
+    {
+        completePhraseDto.PhraseLikes++;
+        await phrasesService.UpdateLikesById(phraseId);
+    }
+}

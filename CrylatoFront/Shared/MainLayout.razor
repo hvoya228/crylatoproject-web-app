@@ -1,0 +1,99 @@
+﻿@inherits LayoutComponentBase
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=VT323&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+
+<PageTitle>CrylatoProject</PageTitle>
+
+<style>
+
+    body {
+        font-family: 'Amatic SC', cursive;
+        font-size: 1.7em;
+    }
+
+    .flex-container-space-between {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .flex-container-space-around {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .line-grey {
+        background-color: #e3e3e3;
+        padding: 1em;
+    }
+
+    .margin-2em {
+        margin: 2em;
+    }
+
+    .margin-01em {
+        margin: 0.1em;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+        transition-duration: 0.3s;
+    }
+
+    a:hover {
+        color:lightslategrey;
+    }
+
+    .logo {
+        font-size: 1.5em;
+        font-family: 'UnifrakturMaguntia', cursive;
+        color:black;
+    }
+</style>
+
+<div class="page">
+    <main>
+
+        <div class="flex-container-space-between">
+
+            <div class="margin-2em">
+                <a class="logo" href="">CrylatoProject</a>
+            </div>
+
+            <div class="margin-2em">
+                <a href="/">About</a>
+            </div>
+
+        </div>
+
+        <div class="line-grey">
+        <div class="flex-container-space-around">
+
+            <div class="margin-01em">
+                <a href="phrases">Phrases</a>
+            </div>
+
+            <div class ="margin-01em">
+                <a href="comments">Forum</a>
+            </div>
+
+            <div class="margin-01em">
+                <a href="add">Add</a>
+            </div>
+
+        </div>
+        </div>
+
+        <article class="content px-4">
+            @Body
+        </article>
+
+    </main>
+</div>

@@ -9,7 +9,7 @@
     }
   },
   "profiles": {
-    "CommentsApi": {
+    "https": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,

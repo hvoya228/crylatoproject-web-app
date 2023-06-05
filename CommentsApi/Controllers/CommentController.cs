@@ -37,14 +37,14 @@ namespace Comments.API.Controllers
             return Ok(result);
         }
 
-        [HttpPost("Insert")]
+        [HttpPost]
         public async Task<ActionResult> Insert([FromBody] CommentDto commentDto)
         {
             var result = await _commentService.Insert(commentDto);
             return Ok(result);
         }
 
-        [HttpDelete("DelereById")]
+        [HttpDelete]
         public async Task<ActionResult> DeleteById(Guid id)
         {
             var result = await _commentService.DeleteById(id);

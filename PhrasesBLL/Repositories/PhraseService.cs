@@ -310,27 +310,18 @@ namespace Phrases.BLL.Repositories
             }
         }
 
-        public async Task<IBaseResponse<string>> UpdateLikesById(Guid id, int likes)
+        public async Task<IBaseResponse<string>> UpdateLikesById(Guid id)
         {
             try
             {
-                if (likes > 0)
-                {
-                    await _unitOfWork._phraseRepository.UpdateLikesById(id, likes);
+                    var phrase = await _unitOfWork._phraseRepository.GetAsync(id);
+                    await _unitOfWork._phraseRepository.UpdateLikesById(id, phrase.PhraseLikes+1);
                     _unitOfWork.Commit();
 
                     return new BaseResponse<string>()
                     {
                         Description = $"Likes updated!"
                     };
-                }
-                else
-                {
-                    return new BaseResponse<string>()
-                    {
-                        Description = $"Likes can`t be less than 0..."
-                    };
-                }
             }
             catch (Exception e)
             {

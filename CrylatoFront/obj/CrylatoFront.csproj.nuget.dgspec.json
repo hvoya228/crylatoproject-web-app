@@ -1,0 +1,741 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Table\\Projects\\websites\\CrylatoProject\\CrylatoFront\\CrylatoFront.csproj": {}
+  },
+  "projects": {
+    "D:\\Table\\Projects\\websites\\CrylatoProject\\Comments.BLL\\Comments.BLL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Table\\Projects\\websites\\CrylatoProject\\Comments.BLL\\Comments.BLL.csproj",
+        "projectName": "Comments.BLL",
+        "projectPath": "D:\\Table\\Projects\\websites\\CrylatoProject\\Comments.BLL\\Comments.BLL.csproj",
+        "packagesPath": "C:\\Users\\Oleh\\.nuget\\packages\\",
+        "outputPath": "D:\\Table\\Projects\\websites\\CrylatoProject\\Comments.BLL\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Oleh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "D:\\Table\\Projects\\websites\\CrylatoProject\\Comments.Data\\Comments.Data.csproj": {
+                "projectPath": "D:\\Table\\Projects\\websites\\CrylatoProject\\Comments.Data\\Comments.Data.csproj"
+              },
+              "D:\\Table\\Projects\\websites\\CrylatoProject\\CommentsDAL\\Comments.DAL.csproj": {
+                "projectPath": "D:\\Table\\Projects\\websites\\CrylatoProject\\CommentsDAL\\Comments.DAL.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.1.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.1.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Table\\Projects\\websites\\CrylatoProject\\Comments.Data\\Comments.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Table\\Projects\\websites\\CrylatoProject\\Comments.Data\\Comments.Data.csproj",
+        "projectName": "Comments.Data",
+        "projectPath": "D:\\Table\\Projects\\websites\\CrylatoProject\\Comments.Data\\Comments.Data.csproj",
+        "packagesPath": "C:\\Users\\Oleh\\.nuget\\packages\\",
+        "outputPath": "D:\\Table\\Projects\\websites\\CrylatoProject\\Comments.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Oleh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Table\\Projects\\websites\\CrylatoProject\\Comments.Migrations\\Comments.Migrations.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Table\\Projects\\websites\\CrylatoProject\\Comments.Migrations\\Comments.Migrations.csproj",
+        "projectName": "Comments.Migrations",
+        "projectPath": "D:\\Table\\Projects\\websites\\CrylatoProject\\Comments.Migrations\\Comments.Migrations.csproj",
+        "packagesPath": "C:\\Users\\Oleh\\.nuget\\packages\\",
+        "outputPath": "D:\\Table\\Projects\\websites\\CrylatoProject\\Comments.Migrations\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Oleh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "D:\\Table\\Projects\\websites\\CrylatoProject\\CommentsDAL\\Comments.DAL.csproj": {
+                "projectPath": "D:\\Table\\Projects\\websites\\CrylatoProject\\CommentsDAL\\Comments.DAL.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Table\\Projects\\websites\\CrylatoProject\\CommentsApi\\Comments.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Table\\Projects\\websites\\CrylatoProject\\CommentsApi\\Comments.API.csproj",
+        "projectName": "Comments.API",
+        "projectPath": "D:\\Table\\Projects\\websites\\CrylatoProject\\CommentsApi\\Comments.API.csproj",
+        "packagesPath": "C:\\Users\\Oleh\\.nuget\\packages\\",
+        "outputPath": "D:\\Table\\Projects\\websites\\CrylatoProject\\CommentsApi\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Oleh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "D:\\Table\\Projects\\websites\\CrylatoProject\\Comments.BLL\\Comments.BLL.csproj": {
+                "projectPath": "D:\\Table\\Projects\\websites\\CrylatoProject\\Comments.BLL\\Comments.BLL.csproj"
+              },
+              "D:\\Table\\Projects\\websites\\CrylatoProject\\Comments.Migrations\\Comments.Migrations.csproj": {
+                "projectPath": "D:\\Table\\Projects\\websites\\CrylatoProject\\Comments.Migrations\\Comments.Migrations.csproj"
+              },
+              "D:\\Table\\Projects\\websites\\CrylatoProject\\CommentsDAL\\Comments.DAL.csproj": {
+                "projectPath": "D:\\Table\\Projects\\websites\\CrylatoProject\\CommentsDAL\\Comments.DAL.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.2.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Table\\Projects\\websites\\CrylatoProject\\CommentsDAL\\Comments.DAL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Table\\Projects\\websites\\CrylatoProject\\CommentsDAL\\Comments.DAL.csproj",
+        "projectName": "Comments.DAL",
+        "projectPath": "D:\\Table\\Projects\\websites\\CrylatoProject\\CommentsDAL\\Comments.DAL.csproj",
+        "packagesPath": "C:\\Users\\Oleh\\.nuget\\packages\\",
+        "outputPath": "D:\\Table\\Projects\\websites\\CrylatoProject\\CommentsDAL\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Oleh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "D:\\Table\\Projects\\websites\\CrylatoProject\\Comments.Data\\Comments.Data.csproj": {
+                "projectPath": "D:\\Table\\Projects\\websites\\CrylatoProject\\Comments.Data\\Comments.Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Bogus": {
+              "target": "Package",
+              "version": "[34.0.2, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.5.2, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Table\\Projects\\websites\\CrylatoProject\\CrylatoFront\\CrylatoFront.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Table\\Projects\\websites\\CrylatoProject\\CrylatoFront\\CrylatoFront.csproj",
+        "projectName": "CrylatoFront",
+        "projectPath": "D:\\Table\\Projects\\websites\\CrylatoProject\\CrylatoFront\\CrylatoFront.csproj",
+        "packagesPath": "C:\\Users\\Oleh\\.nuget\\packages\\",
+        "outputPath": "D:\\Table\\Projects\\websites\\CrylatoProject\\CrylatoFront\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Oleh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "D:\\Table\\Projects\\websites\\CrylatoProject\\Comments.Data\\Comments.Data.csproj": {
+                "projectPath": "D:\\Table\\Projects\\websites\\CrylatoProject\\Comments.Data\\Comments.Data.csproj"
+              },
+              "D:\\Table\\Projects\\websites\\CrylatoProject\\CommentsApi\\Comments.API.csproj": {
+                "projectPath": "D:\\Table\\Projects\\websites\\CrylatoProject\\CommentsApi\\Comments.API.csproj"
+              },
+              "D:\\Table\\Projects\\websites\\CrylatoProject\\PhrasesApi\\Phrases.API.csproj": {
+                "projectPath": "D:\\Table\\Projects\\websites\\CrylatoProject\\PhrasesApi\\Phrases.API.csproj"
+              },
+              "D:\\Table\\Projects\\websites\\CrylatoProject\\PhrasesData\\Phrases.Data.csproj": {
+                "projectPath": "D:\\Table\\Projects\\websites\\CrylatoProject\\PhrasesData\\Phrases.Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Table\\Projects\\websites\\CrylatoProject\\PhrasesApi\\Phrases.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Table\\Projects\\websites\\CrylatoProject\\PhrasesApi\\Phrases.API.csproj",
+        "projectName": "Phrases.API",
+        "projectPath": "D:\\Table\\Projects\\websites\\CrylatoProject\\PhrasesApi\\Phrases.API.csproj",
+        "packagesPath": "C:\\Users\\Oleh\\.nuget\\packages\\",
+        "outputPath": "D:\\Table\\Projects\\websites\\CrylatoProject\\PhrasesApi\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Oleh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "D:\\Table\\Projects\\websites\\CrylatoProject\\PhrasesBLL\\Phrases.BLL.csproj": {
+                "projectPath": "D:\\Table\\Projects\\websites\\CrylatoProject\\PhrasesBLL\\Phrases.BLL.csproj"
+              },
+              "D:\\Table\\Projects\\websites\\CrylatoProject\\PhrasesDAL\\Phrases.DAL.csproj": {
+                "projectPath": "D:\\Table\\Projects\\websites\\CrylatoProject\\PhrasesDAL\\Phrases.DAL.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.2.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Table\\Projects\\websites\\CrylatoProject\\PhrasesBLL\\Phrases.BLL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Table\\Projects\\websites\\CrylatoProject\\PhrasesBLL\\Phrases.BLL.csproj",
+        "projectName": "Phrases.BLL",
+        "projectPath": "D:\\Table\\Projects\\websites\\CrylatoProject\\PhrasesBLL\\Phrases.BLL.csproj",
+        "packagesPath": "C:\\Users\\Oleh\\.nuget\\packages\\",
+        "outputPath": "D:\\Table\\Projects\\websites\\CrylatoProject\\PhrasesBLL\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Oleh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "D:\\Table\\Projects\\websites\\CrylatoProject\\PhrasesDAL\\Phrases.DAL.csproj": {
+                "projectPath": "D:\\Table\\Projects\\websites\\CrylatoProject\\PhrasesDAL\\Phrases.DAL.csproj"
+              },
+              "D:\\Table\\Projects\\websites\\CrylatoProject\\PhrasesData\\Phrases.Data.csproj": {
+                "projectPath": "D:\\Table\\Projects\\websites\\CrylatoProject\\PhrasesData\\Phrases.Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.1.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.1.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Table\\Projects\\websites\\CrylatoProject\\PhrasesDAL\\Phrases.DAL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Table\\Projects\\websites\\CrylatoProject\\PhrasesDAL\\Phrases.DAL.csproj",
+        "projectName": "Phrases.DAL",
+        "projectPath": "D:\\Table\\Projects\\websites\\CrylatoProject\\PhrasesDAL\\Phrases.DAL.csproj",
+        "packagesPath": "C:\\Users\\Oleh\\.nuget\\packages\\",
+        "outputPath": "D:\\Table\\Projects\\websites\\CrylatoProject\\PhrasesDAL\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Oleh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "D:\\Table\\Projects\\websites\\CrylatoProject\\PhrasesData\\Phrases.Data.csproj": {
+                "projectPath": "D:\\Table\\Projects\\websites\\CrylatoProject\\PhrasesData\\Phrases.Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.123, )"
+            },
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[5.1.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Table\\Projects\\websites\\CrylatoProject\\PhrasesData\\Phrases.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Table\\Projects\\websites\\CrylatoProject\\PhrasesData\\Phrases.Data.csproj",
+        "projectName": "Phrases.Data",
+        "projectPath": "D:\\Table\\Projects\\websites\\CrylatoProject\\PhrasesData\\Phrases.Data.csproj",
+        "packagesPath": "C:\\Users\\Oleh\\.nuget\\packages\\",
+        "outputPath": "D:\\Table\\Projects\\websites\\CrylatoProject\\PhrasesData\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Oleh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

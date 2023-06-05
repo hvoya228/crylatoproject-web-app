@@ -1,0 +1,180 @@
+﻿@page "/"
+@using CrylatoFront.Services;
+@using global::Phrases.Data.Dtos;
+@using global::Phrases.Data.Interfaces;
+@inject PhrasesService phrasesService
+
+<PageTitle>CrylatoProject</PageTitle>
+
+<style>
+
+    p.font-size-3em {
+        font-size: 3em;
+    }
+
+    p.text-align-center {
+        text-align: center;
+    }
+
+    .align-items-center {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    svg {
+        font-weight: bold;
+        max-width: 600px;
+        height: 100%;
+    }
+
+    .green-color {
+        color: #26926b;
+    }
+
+    .yellow-color {
+        color: #e7a53f;
+    }
+
+    .blue-color {
+        color: #4984d8;
+    }
+
+    .red-color {
+        color: #aa2e2e;
+    }
+
+    .grey-color {
+        color: #9d9d97;
+    }
+
+    .brown-color {
+        color: #936b18;
+    }
+
+    lightblue-color {
+        color: #51a79e;
+    }
+
+    lightgreen-color {
+        color: #62cca6;
+    }
+
+    p.font-size-2em {
+        font-size: 2em;
+    }
+
+</style>
+
+<div class="align-items-center">
+
+<svg viewbox="0 0 100 20">
+    <defs>
+        <linearGradient id="gradient">
+            <stop color="#000" />
+        </linearGradient>
+        <pattern id="wave" x="0" y="-0.5" width="100%" height="100%" patternUnits="userSpaceOnUse">
+            <path id="wavePath" d="M-40 9 Q-30 7 -20 9 T0 9 T20 9 T40 9 T60 9 T80 9 T100 9 T120 9 V20 H-40z" mask="url(#mask)" fill="url(#gradient)">
+                <animateTransform attributeName="transform"
+                                  begin="0s"
+                                  dur="1.5s"
+                                  type="translate"
+                                  from="0,0"
+                                  to="40,0"
+                                  repeatCount="indefinite" />
+            </path>
+        </pattern>
+    </defs>
+    <text text-anchor="middle" x="50" y="15" font-size="17" fill="white" fill-opacity="0.1">crylato!</text>
+    <text text-anchor="middle" x="50" y="15" font-size="17" fill="url(#wave)" fill-opacity="1">crylato!</text>
+</svg>
+
+<p class="font-size-3em">
+    <span class="red-color">--</span>
+    <span class="yellow-color">--</span>
+    <span class="green-color">--</span>
+    <span class="blue-color">--</span>
+</p>
+
+<p class="font-size-2em">
+    We have @phrasesCount phrases posted!
+</p>
+
+<p class="text-align-center">
+Here you can <a href="phrases"><b>learn</b></a> about <span class="blue-color">Uk</span><span class="yellow-color">rainian</span> <span class="green-color">phraseologisms</span>, <span class="blue-color">dialectics</span> and even traditional <span class="red-color">swearing</span>.
+<br />
+Also you can <a href="add"><b>add</b></a> new content and visit a <a href="forum"><b>forum</b></a>.
+</p>
+
+<p class="text-align-center">
+Ukrainian <span class="green-color">phraseologisms</span>, <span class="blue-color">dialectics</span> and <span class="red-color">swearing</span> have a long history, which begins with the formation of the Ukrainian language and the development of Ukrainian culture.
+</p>
+
+    <p class="text-align-center">
+<span class="green-color"><b>Phraseologisms</b></span> arose on the basis of folk traditions, beliefs, customs and folklore. They reflect folk wisdom, a way of thinking and expressing.
+<br />
+Many phraseological units have their origins in folk sayings, fairy tales, songs and historical events.
+<br />
+In the process of historical development, many of these idioms have survived to the present day, becoming an integral part of the Ukrainian language and culture.
+</p>
+
+    <p class="text-align-center">
+<span class="blue-color"><b>Dialectics</b></span> arose as a result of the regional diversity of the Ukrainian language.
+<br />
+In different regions of Ukraine, different dialects developed with their own peculiarities of phonetics, vocabulary and grammar.
+<br />
+These dialectics reflect the local culture and way of life of the population. They are evidence of the diversity of the Ukrainian language and regional identity.
+</p>
+
+    <p class="text-align-center">
+<span class="red-color"><b>Swearing</b></span> words, they arose as an expression of feelings, emotions and a way of expressing one's thoughts.
+<br />
+The use of swear words can be the result of the influence of the social and cultural environment, as well as the individual characteristics of the speaker.
+<br />
+Swear words can have a wide range of meanings and be used in different contexts to emphasize the emotional coloring of speech.
+</p>
+
+<p class="text-align-center">
+<span class="brown-color">
+<b>
+It is important to note that Ukrainian idioms, dialectics and swear words are constantly evolving and changing along with the language and culture.
+<br />
+They are an integral part of our heritage and express the richness of the Ukrainian language and culture.
+</b>
+</span>
+</p>
+
+</div>
+
+<hr />
+
+<p class="text-align-center">
+<span class="grey-color">&copy; 2023, All rights reserved.</span>
+</p>
+
+@code{
+    IBaseResponse<IEnumerable<CompletePhraseDto>> phrasesFromApi;
+    List<CompletePhraseDto> phrases;
+    public int phrasesCount;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await GetPhrasesCount();
+    }
+
+    public async Task GetPhrasesCount()
+    {
+        phrasesFromApi = await phrasesService.GetAllComplete();
+
+        if(phrasesFromApi is not null)
+        {
+            phrases = phrasesFromApi.Data.ToList();
+            phrasesCount = phrases.Count();
+        }
+        else
+        {
+            phrasesCount = 0;
+        }
+    }
+}

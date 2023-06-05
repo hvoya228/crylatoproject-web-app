@@ -18,7 +18,7 @@ namespace Phrases.BLL.Repositories.Interfaces
         Task<IBaseResponse<IEnumerable<CompletePhraseDto>>> GetAllCompleteByRegionId(Guid regionId);
         Task<IBaseResponse<IEnumerable<PhraseDto>>> GetAll();
         Task<IBaseResponse<string>> UpdateById(Guid id, Phrase phrase);
-        Task<IBaseResponse<string>> UpdateLikesById(Guid id, int likes);
+        Task<IBaseResponse<string>> UpdateLikesById(Guid id);
         Task<IBaseResponse<string>> Insert(Phrase phrase);
         Task<IBaseResponse<string>> DeleteById(Guid id);
     }

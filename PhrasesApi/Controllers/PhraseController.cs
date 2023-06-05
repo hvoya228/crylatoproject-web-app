@@ -45,13 +45,6 @@ namespace Phrases.API.Controllers
             return Ok(result);
         }
 
-        [HttpGet("GetAll")]
-        public async Task<ActionResult<IEnumerable<PhraseDto>>> GetAll()
-        {
-            var result = await _phraseService.GetAll();
-            return Ok(result);
-        }
-
         [HttpPut("UpdateById/{id}")]
         public async Task<ActionResult<string>> UpdateById(Guid id, [FromBody] Phrase phrase)
         {
@@ -59,10 +52,10 @@ namespace Phrases.API.Controllers
             return Ok(result);
         }
 
-        [HttpPut("UpdateLikesById/{id}/{likes}")]
-        public async Task<ActionResult<string>> UpdateLikesById(Guid id, int likes)
+        [HttpPut("UpdateLikesById")]
+        public async Task<ActionResult<string>> UpdateLikesById(Guid id)
         {
-            var result = await _phraseService.UpdateLikesById(id, likes);
+            var result = await _phraseService.UpdateLikesById(id);
             return Ok(result);
         }
 
@@ -73,7 +66,7 @@ namespace Phrases.API.Controllers
             return Ok(result);
         }
 
-        [HttpDelete("DelereById")]
+        [HttpDelete]
         public async Task<ActionResult> DeleteById(Guid id)
         {
             var result = await _phraseService.DeleteById(id);
