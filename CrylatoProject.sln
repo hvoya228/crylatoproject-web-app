@@ -29,6 +29,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Blazor", "Blazor", "{A48692
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrylatoFront", "CrylatoFront\CrylatoFront.csproj", "{DD1794F1-6B53-4159-8516-15DD03B789FD}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Identity", "Identity", "{74140612-2D54-4661-8F68-3B65120814ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrylatoIdentity", "CrylatoIdentity\CrylatoIdentity.csproj", "{5D33848D-FF7F-421F-BF44-A46DC0AE4B41}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +79,10 @@ Global
 		{DD1794F1-6B53-4159-8516-15DD03B789FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD1794F1-6B53-4159-8516-15DD03B789FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DD1794F1-6B53-4159-8516-15DD03B789FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D33848D-FF7F-421F-BF44-A46DC0AE4B41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D33848D-FF7F-421F-BF44-A46DC0AE4B41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D33848D-FF7F-421F-BF44-A46DC0AE4B41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D33848D-FF7F-421F-BF44-A46DC0AE4B41}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -90,6 +98,7 @@ Global
 		{C7D8285A-113F-4993-B2CC-C98E71A5FDD8} = {FECD430A-750C-4830-9F02-1EC8FC2C2816}
 		{F012E6F4-DFFF-46F3-A98F-D1FC74FF7FC7} = {FECD430A-750C-4830-9F02-1EC8FC2C2816}
 		{DD1794F1-6B53-4159-8516-15DD03B789FD} = {A48692BA-6855-496B-9C00-703761FB4BEA}
+		{5D33848D-FF7F-421F-BF44-A46DC0AE4B41} = {74140612-2D54-4661-8F68-3B65120814ED}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {30F289AB-C423-4D1E-AF1F-775020E1CC3D}
