@@ -1,1 +1,1 @@
-# CrylatoProject
+**Technologies used:** Dapper, Entity Framework, Blazor.
